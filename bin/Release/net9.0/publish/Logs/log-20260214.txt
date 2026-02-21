@@ -1,0 +1,36 @@
+2026-02-14 09:17:37.987 +05:30 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-14 09:17:38.104 +05:30 [INF] Now listening on: http://localhost:5000
+2026-02-14 09:17:38.108 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-14 09:17:38.109 +05:30 [INF] Hosting environment: Production
+2026-02-14 09:17:38.110 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish
+2026-02-14 09:17:41.116 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-02-14 09:17:41.147 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-14 09:17:42.446 +05:30 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2026-02-14 09:17:42.565 +05:30 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\index.html'
+2026-02-14 09:17:42.567 +05:30 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2026-02-14 09:17:42.574 +05:30 [INF] HTTP GET /index.html responded 200 in 1428.4591 ms
+2026-02-14 09:17:42.575 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/polyfills.6ec943b2ef42929d.js - null null
+2026-02-14 09:17:42.575 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/main.af1e638c14212a76.js - null null
+2026-02-14 09:17:42.579 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/styles.c14e10268374371b.css - null null
+2026-02-14 09:17:42.589 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/index.html - 200 123095 text/html 1475.1983ms
+2026-02-14 09:17:42.606 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/runtime.aede903eef1f58f6.js - null null
+2026-02-14 09:17:42.616 +05:30 [INF] Sending file. Request path: '/runtime.aede903eef1f58f6.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\runtime.aede903eef1f58f6.js'
+2026-02-14 09:17:42.618 +05:30 [INF] HTTP GET /runtime.aede903eef1f58f6.js responded 200 in 8.2021 ms
+2026-02-14 09:17:42.621 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/runtime.aede903eef1f58f6.js - 200 3450 text/javascript 14.7714ms
+2026-02-14 09:17:42.622 +05:30 [INF] Sending file. Request path: '/styles.c14e10268374371b.css'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\styles.c14e10268374371b.css'
+2026-02-14 09:17:42.628 +05:30 [INF] HTTP GET /styles.c14e10268374371b.css responded 200 in 30.8882 ms
+2026-02-14 09:17:42.630 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/styles.c14e10268374371b.css - 200 441221 text/css 50.3874ms
+2026-02-14 09:17:42.674 +05:30 [INF] Sending file. Request path: '/polyfills.6ec943b2ef42929d.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\polyfills.6ec943b2ef42929d.js'
+2026-02-14 09:17:42.677 +05:30 [INF] HTTP GET /polyfills.6ec943b2ef42929d.js responded 200 in 85.4598 ms
+2026-02-14 09:17:42.680 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/polyfills.6ec943b2ef42929d.js - 200 34814 text/javascript 105.0494ms
+2026-02-14 09:17:43.212 +05:30 [INF] Sending file. Request path: '/main.af1e638c14212a76.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\main.af1e638c14212a76.js'
+2026-02-14 09:17:43.214 +05:30 [INF] HTTP GET /main.af1e638c14212a76.js responded 200 in 619.7638 ms
+2026-02-14 09:17:43.217 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/main.af1e638c14212a76.js - 200 3266181 text/javascript 641.9474ms
+2026-02-14 09:17:43.399 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/842.09acc32fe8ae1d67.js - null null
+2026-02-14 09:17:43.404 +05:30 [INF] Sending file. Request path: '/842.09acc32fe8ae1d67.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\842.09acc32fe8ae1d67.js'
+2026-02-14 09:17:43.406 +05:30 [INF] HTTP GET /842.09acc32fe8ae1d67.js responded 200 in 4.5172 ms
+2026-02-14 09:17:43.408 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/842.09acc32fe8ae1d67.js - 200 7073 text/javascript 9.7686ms
+2026-02-14 09:17:43.430 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/8.eb3f3c02544c50dc.js - null null
+2026-02-14 09:17:43.496 +05:30 [INF] Sending file. Request path: '/8.eb3f3c02544c50dc.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\8.eb3f3c02544c50dc.js'
+2026-02-14 09:17:43.499 +05:30 [INF] HTTP GET /8.eb3f3c02544c50dc.js responded 200 in 65.1997 ms
+2026-02-14 09:17:43.502 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/8.eb3f3c02544c50dc.js - 200 63858 text/javascript 71.2502ms

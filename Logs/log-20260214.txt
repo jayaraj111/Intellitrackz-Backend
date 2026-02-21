@@ -1,0 +1,289 @@
+2026-02-14 00:17:23.974 +05:30 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-14 00:17:24.421 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-14 00:17:24.564 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-14 00:17:24.566 +05:30 [INF] Hosting environment: Development
+2026-02-14 00:17:24.570 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-14 00:17:57.107 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/user/login - null null
+2026-02-14 00:17:57.203 +05:30 [INF] CORS policy execution successful.
+2026-02-14 00:17:57.214 +05:30 [INF] HTTP OPTIONS /api/user/login responded 204 in 20.0344 ms
+2026-02-14 00:17:57.238 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/user/login - 204 null null 142.7271ms
+2026-02-14 00:17:57.248 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/user/login - application/json 38
+2026-02-14 00:17:57.259 +05:30 [INF] CORS policy execution successful.
+2026-02-14 00:17:57.264 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-14 00:17:57.384 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-14 00:17:57.432 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AdminDashboard.DtoModels.LoginRequest) on controller AdminDashboard.Controllers.UserController (AdminDashboard).
+2026-02-14 00:18:00.207 +05:30 [INF] Executed DbCommand (69ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2026-02-14 00:18:00.535 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[AdminDashboard.DtoModels.LoginData, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-14 00:18:00.569 +05:30 [INF] Executed action AdminDashboard.Controllers.UserController.Login (AdminDashboard) in 3129.0802ms
+2026-02-14 00:18:00.572 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-14 00:18:00.576 +05:30 [INF] HTTP POST /api/user/login responded 200 in 3318.0815 ms
+2026-02-14 00:18:00.596 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/user/login - 200 null application/json; charset=utf-8 3348.6746ms
+2026-02-14 00:20:40.137 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/driver/trips/100/location - application/json 66
+2026-02-14 00:20:40.347 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard)'
+2026-02-14 00:20:40.354 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard)'
+2026-02-14 00:20:40.357 +05:30 [ERR] HTTP POST /api/driver/trips/100/location responded 500 in 206.7405 ms
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'AdminDashboard.Controllers.DriverTripController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfoEx[] constructors, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-02-14 00:20:40.447 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Multiple constructors accepting all given argument types have been found in type 'AdminDashboard.Controllers.DriverTripController'. There should only be one applicable constructor.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.TryFindMatchingConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfo& matchingConstructor, Nullable`1[]& parameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.FindApplicableConstructor(Type instanceType, Type[] argumentTypes, ConstructorInfoEx[] constructors, ConstructorInfo& matchingConstructor, Nullable`1[]& matchingParameterMap)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactoryInternal(Type instanceType, Type[] argumentTypes, ParameterExpression& provider, ParameterExpression& argumentArray, Expression& factoryExpressionBody)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateFactory(Type instanceType, Type[] argumentTypes)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.CreateActivator(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.CreateControllerFactory(ControllerActionDescriptor descriptor)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvokerCache.GetCachedResult(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Routing.ControllerRequestDelegateFactory.<>c__DisplayClass12_0.<CreateRequestDelegate>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-02-14 00:20:40.553 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/driver/trips/100/location - 500 null text/plain; charset=utf-8 416.1371ms
+2026-02-14 00:22:27.317 +05:30 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-14 00:22:27.710 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-14 00:22:27.837 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-14 00:22:27.839 +05:30 [INF] Hosting environment: Development
+2026-02-14 00:22:27.840 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-14 00:22:30.688 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/driver/trips/100/location - application/json 66
+2026-02-14 00:22:30.756 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-14 00:22:30.922 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard)'
+2026-02-14 00:22:30.956 +05:30 [INF] Route matched with {action = "LogLocation", controller = "DriverTrip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogLocation(Int32, AdminDashboard.DtoModels.TripLocationLogRequest) on controller AdminDashboard.Controllers.DriverTripController (AdminDashboard).
+2026-02-14 00:22:33.045 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__tripId_0='?' (DbType = Int32), @__driverId_1='?' (DbType = Int32), @__companyId_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Trip] AS [t]
+        WHERE [t].[TripId] = @__tripId_0 AND [t].[DriverId] = @__driverId_1 AND [t].[CompanyId] = @__companyId_2 AND [t].[Status] IN (N'S', N'P')) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-14 00:22:36.925 +05:30 [WRN] Location logging failed. TripId=100, DriverId=6
+2026-02-14 00:22:38.834 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-14 00:22:38.857 +05:30 [INF] Executed action AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard) in 7893.6682ms
+2026-02-14 00:22:38.862 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard)'
+2026-02-14 00:22:38.867 +05:30 [INF] HTTP POST /api/driver/trips/100/location responded 400 in 8118.9770 ms
+2026-02-14 00:22:38.883 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/driver/trips/100/location - 400 null application/json; charset=utf-8 8214.2516ms
+2026-02-14 00:26:24.075 +05:30 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-14 00:26:24.486 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-14 00:26:24.626 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-14 00:26:24.628 +05:30 [INF] Hosting environment: Development
+2026-02-14 00:26:24.629 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-14 00:26:30.631 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/driver/trips/100/location - application/json 66
+2026-02-14 00:26:30.702 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-14 00:26:30.910 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard)'
+2026-02-14 00:26:30.954 +05:30 [INF] Route matched with {action = "LogLocation", controller = "DriverTrip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogLocation(Int32, AdminDashboard.DtoModels.TripLocationLogRequest) on controller AdminDashboard.Controllers.DriverTripController (AdminDashboard).
+2026-02-14 00:26:33.548 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__tripId_0='?' (DbType = Int32), @__driverId_1='?' (DbType = Int32), @__companyId_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Trip] AS [t]
+        WHERE [t].[TripId] = @__tripId_0 AND [t].[DriverId] = @__driverId_1 AND [t].[CompanyId] = @__companyId_2 AND [t].[Status] IN (N'S', N'P')) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-02-14 00:26:39.255 +05:30 [WRN] Location logging failed. TripId=100, DriverId=6
+2026-02-14 00:26:39.267 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-14 00:26:39.280 +05:30 [INF] Executed action AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard) in 8315.6871ms
+2026-02-14 00:26:39.285 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.DriverTripController.LogLocation (AdminDashboard)'
+2026-02-14 00:26:39.291 +05:30 [INF] HTTP POST /api/driver/trips/100/location responded 400 in 8594.0536 ms
+2026-02-14 00:26:39.305 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/driver/trips/100/location - 400 null application/json; charset=utf-8 8689.3018ms
+2026-02-14 00:26:47.290 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/driver/trips/today - application/json 2
+2026-02-14 00:26:47.396 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'PC3tZ22HAKQh00qStgTW5hrYickDypItIWtczAnbbPE'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-02-14 00:26:47.405 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'PC3tZ22HAKQh00qStgTW5hrYickDypItIWtczAnbbPE'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2026-02-14 00:26:47.408 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-02-14 00:26:47.416 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2026-02-14 00:26:47.417 +05:30 [INF] HTTP GET /api/driver/trips/today responded 401 in 121.3431 ms
+2026-02-14 00:26:47.420 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/driver/trips/today - 401 0 null 131.1433ms
+2026-02-14 00:27:32.270 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/driver/trips/today - application/json 2
+2026-02-14 00:27:32.281 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.DriverTripController.GetTodayTrips (AdminDashboard)'
+2026-02-14 00:27:32.288 +05:30 [INF] Route matched with {action = "GetTodayTrips", controller = "DriverTrip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTodayTrips() on controller AdminDashboard.Controllers.DriverTripController (AdminDashboard).
+2026-02-14 00:27:32.529 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__driverId_0='?' (DbType = Int32), @__companyId_1='?' (DbType = Int32), @__today_2='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteId], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[EndLocationLat], [r].[EndLocationLng], [v].[VehicleId], [v].[RegistrationNumber], [v].[BeaconId]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+WHERE [t].[DriverId] = @__driverId_0 AND [t].[CompanyId] = @__companyId_1 AND [t].[TripDate] = @__today_2 AND [t].[Status] <> N'X'
+2026-02-14 00:27:32.535 +05:30 [INF] No trips found for DriverId=6
+2026-02-14 00:27:32.536 +05:30 [INF] Today trips fetched successfully. DriverId=6
+2026-02-14 00:27:32.538 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-02-14 00:27:32.553 +05:30 [INF] Executed action AdminDashboard.Controllers.DriverTripController.GetTodayTrips (AdminDashboard) in 263.0429ms
+2026-02-14 00:27:32.555 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.DriverTripController.GetTodayTrips (AdminDashboard)'
+2026-02-14 00:27:32.556 +05:30 [INF] HTTP GET /api/driver/trips/today responded 200 in 283.4657 ms
+2026-02-14 00:27:32.558 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/driver/trips/today - 200 null application/json; charset=utf-8 288.503ms
+2026-02-14 09:10:14.663 +05:30 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-14 09:10:15.204 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-14 09:10:15.325 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-14 09:10:15.327 +05:30 [INF] Hosting environment: Development
+2026-02-14 09:10:15.328 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-14 09:10:28.825 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/ - null null
+2026-02-14 09:10:29.033 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-14 09:10:29.132 +05:30 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2026-02-14 09:10:29.204 +05:30 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\index.html'
+2026-02-14 09:10:29.260 +05:30 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2026-02-14 09:10:29.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/runtime.aede903eef1f58f6.js - null null
+2026-02-14 09:10:29.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/polyfills.6ec943b2ef42929d.js - null null
+2026-02-14 09:10:29.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-14 09:10:29.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/styles.c14e10268374371b.css - null null
+2026-02-14 09:10:29.260 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/main.af1e638c14212a76.js - null null
+2026-02-14 09:10:29.266 +05:30 [INF] CORS policy execution successful.
+2026-02-14 09:10:29.266 +05:30 [INF] HTTP GET /index.html responded 200 in 237.0554 ms
+2026-02-14 09:10:29.267 +05:30 [INF] CORS policy execution successful.
+2026-02-14 09:10:29.281 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 12.5597ms
+2026-02-14 09:10:29.315 +05:30 [INF] HTTP GET /styles.c14e10268374371b.css responded 404 in 43.6906 ms
+2026-02-14 09:10:29.316 +05:30 [INF] CORS policy execution successful.
+2026-02-14 09:10:29.322 +05:30 [INF] HTTP GET /runtime.aede903eef1f58f6.js responded 404 in 56.6887 ms
+2026-02-14 09:10:29.323 +05:30 [INF] HTTP GET /polyfills.6ec943b2ef42929d.js responded 404 in 56.6928 ms
+2026-02-14 09:10:29.326 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/index.html - 200 null text/html 514.6778ms
+2026-02-14 09:10:29.329 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/styles.c14e10268374371b.css - 404 0 null 70.8594ms
+2026-02-14 09:10:29.330 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/_vs/browserLink - null null
+2026-02-14 09:10:29.330 +05:30 [INF] HTTP GET /main.af1e638c14212a76.js responded 404 in 14.2600 ms
+2026-02-14 09:10:29.334 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/runtime.aede903eef1f58f6.js - 404 0 null 74.9958ms
+2026-02-14 09:10:29.334 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/polyfills.6ec943b2ef42929d.js - 404 0 null 75.6638ms
+2026-02-14 09:10:29.355 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/main.af1e638c14212a76.js - 404 0 null 96.4163ms
+2026-02-14 09:10:29.360 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/runtime.aede903eef1f58f6.js, Response status code: 404
+2026-02-14 09:10:29.349 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/styles.c14e10268374371b.css, Response status code: 404
+2026-02-14 09:10:29.400 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/polyfills.6ec943b2ef42929d.js, Response status code: 404
+2026-02-14 09:10:29.404 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/main.af1e638c14212a76.js, Response status code: 404
+2026-02-14 09:10:29.478 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/_vs/browserLink - 200 null text/javascript; charset=UTF-8 148.6689ms
+2026-02-14 09:10:29.509 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/favicon.ico - null null
+2026-02-14 09:10:29.512 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 0.2875 ms
+2026-02-14 09:10:29.514 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/favicon.ico - 404 0 null 5.6394ms
+2026-02-14 09:10:29.518 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/favicon.ico, Response status code: 404
+2026-02-14 09:10:38.125 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/authentication/login - null null
+2026-02-14 09:10:38.134 +05:30 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2026-02-14 09:10:38.137 +05:30 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\index.html'
+2026-02-14 09:10:38.140 +05:30 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2026-02-14 09:10:38.142 +05:30 [INF] HTTP GET /index.html responded 200 in 7.9603 ms
+2026-02-14 09:10:38.150 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/index.html - 200 null text/html 24.4893ms
+2026-02-14 09:10:38.161 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/runtime.aede903eef1f58f6.js - null null
+2026-02-14 09:10:38.163 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/main.af1e638c14212a76.js - null null
+2026-02-14 09:10:38.163 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-14 09:10:38.163 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/polyfills.6ec943b2ef42929d.js - null null
+2026-02-14 09:10:38.164 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/_vs/browserLink - null null
+2026-02-14 09:10:38.164 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/styles.c14e10268374371b.css - null null
+2026-02-14 09:10:38.166 +05:30 [INF] CORS policy execution successful.
+2026-02-14 09:10:38.169 +05:30 [INF] CORS policy execution successful.
+2026-02-14 09:10:38.172 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 9.5766ms
+2026-02-14 09:10:38.178 +05:30 [INF] CORS policy execution successful.
+2026-02-14 09:10:38.184 +05:30 [INF] HTTP GET /styles.c14e10268374371b.css responded 404 in 0.1758 ms
+2026-02-14 09:10:38.184 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.1642ms
+2026-02-14 09:10:38.185 +05:30 [INF] HTTP GET /runtime.aede903eef1f58f6.js responded 404 in 18.9630 ms
+2026-02-14 09:10:38.186 +05:30 [INF] HTTP GET /main.af1e638c14212a76.js responded 404 in 16.9049 ms
+2026-02-14 09:10:38.192 +05:30 [INF] HTTP GET /polyfills.6ec943b2ef42929d.js responded 404 in 14.5766 ms
+2026-02-14 09:10:38.194 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/styles.c14e10268374371b.css - 404 0 null 30.617ms
+2026-02-14 09:10:38.200 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/runtime.aede903eef1f58f6.js - 404 0 null 38.2288ms
+2026-02-14 09:10:38.201 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/main.af1e638c14212a76.js - 404 0 null 38.2769ms
+2026-02-14 09:10:38.203 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/polyfills.6ec943b2ef42929d.js - 404 0 null 40.0419ms
+2026-02-14 09:10:38.208 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/styles.c14e10268374371b.css, Response status code: 404
+2026-02-14 09:10:38.211 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/runtime.aede903eef1f58f6.js, Response status code: 404
+2026-02-14 09:10:38.215 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/main.af1e638c14212a76.js, Response status code: 404
+2026-02-14 09:10:38.218 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5046/polyfills.6ec943b2ef42929d.js, Response status code: 404
+2026-02-14 09:15:09.012 +05:30 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-14 09:15:09.394 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-14 09:15:09.511 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-14 09:15:09.513 +05:30 [INF] Hosting environment: Development
+2026-02-14 09:15:09.514 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-14 09:15:32.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/styles.c14e10268374371b.css - null null
+2026-02-14 09:15:32.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/runtime.aede903eef1f58f6.js - null null
+2026-02-14 09:15:32.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/_vs/browserLink - null null
+2026-02-14 09:15:32.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/main.af1e638c14212a76.js - null null
+2026-02-14 09:15:32.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/polyfills.6ec943b2ef42929d.js - null null
+2026-02-14 09:15:32.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/_framework/aspnetcore-browser-refresh.js - null null
+2026-02-14 09:15:32.539 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 98.0161ms
+2026-02-14 09:15:32.614 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/_vs/browserLink - 200 null text/javascript; charset=UTF-8 174.891ms
+2026-02-14 09:15:32.616 +05:30 [INF] Sending file. Request path: '/runtime.aede903eef1f58f6.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\runtime.aede903eef1f58f6.js'
+2026-02-14 09:15:32.616 +05:30 [INF] Sending file. Request path: '/polyfills.6ec943b2ef42929d.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\polyfills.6ec943b2ef42929d.js'
+2026-02-14 09:15:32.663 +05:30 [INF] Sending file. Request path: '/styles.c14e10268374371b.css'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\styles.c14e10268374371b.css'
+2026-02-14 09:15:32.670 +05:30 [INF] HTTP GET /polyfills.6ec943b2ef42929d.js responded 200 in 100.3111 ms
+2026-02-14 09:15:32.670 +05:30 [INF] HTTP GET /styles.c14e10268374371b.css responded 200 in 101.8085 ms
+2026-02-14 09:15:32.670 +05:30 [INF] HTTP GET /runtime.aede903eef1f58f6.js responded 200 in 99.2154 ms
+2026-02-14 09:15:32.675 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/polyfills.6ec943b2ef42929d.js - 200 34814 text/javascript 235.4235ms
+2026-02-14 09:15:32.678 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/styles.c14e10268374371b.css - 200 441221 text/css 239.0752ms
+2026-02-14 09:15:32.680 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/runtime.aede903eef1f58f6.js - 200 3450 text/javascript 240.9983ms
+2026-02-14 09:15:32.711 +05:30 [INF] Sending file. Request path: '/main.af1e638c14212a76.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\main.af1e638c14212a76.js'
+2026-02-14 09:15:32.714 +05:30 [INF] HTTP GET /main.af1e638c14212a76.js responded 200 in 145.7015 ms
+2026-02-14 09:15:32.716 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/main.af1e638c14212a76.js - 200 3266181 text/javascript 276.6357ms
+2026-02-14 09:15:32.895 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/842.09acc32fe8ae1d67.js - null null
+2026-02-14 09:15:32.900 +05:30 [INF] Sending file. Request path: '/842.09acc32fe8ae1d67.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\842.09acc32fe8ae1d67.js'
+2026-02-14 09:15:32.902 +05:30 [INF] HTTP GET /842.09acc32fe8ae1d67.js responded 200 in 3.4254 ms
+2026-02-14 09:15:32.905 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/842.09acc32fe8ae1d67.js - 200 7073 text/javascript 10.7531ms
+2026-02-14 09:15:32.935 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/8.eb3f3c02544c50dc.js - null null
+2026-02-14 09:15:32.942 +05:30 [INF] Sending file. Request path: '/8.eb3f3c02544c50dc.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\8.eb3f3c02544c50dc.js'
+2026-02-14 09:15:32.947 +05:30 [INF] HTTP GET /8.eb3f3c02544c50dc.js responded 200 in 8.4294 ms
+2026-02-14 09:15:32.949 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/8.eb3f3c02544c50dc.js - 200 63858 text/javascript 14.0685ms
+2026-02-14 09:15:39.443 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/user/login - application/json 38
+2026-02-14 09:15:39.458 +05:30 [INF] CORS policy execution successful.
+2026-02-14 09:15:39.467 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-14 09:15:39.599 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-14 09:15:39.653 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AdminDashboard.DtoModels.LoginRequest) on controller AdminDashboard.Controllers.UserController (AdminDashboard).
+2026-02-14 09:15:42.705 +05:30 [INF] Executed DbCommand (181ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2026-02-14 09:15:43.055 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[AdminDashboard.DtoModels.LoginData, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-14 09:15:43.096 +05:30 [INF] Executed action AdminDashboard.Controllers.UserController.Login (AdminDashboard) in 3430.944ms
+2026-02-14 09:15:43.100 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-14 09:15:43.106 +05:30 [INF] HTTP POST /api/user/login responded 200 in 3653.7996 ms
+2026-02-14 09:15:43.121 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/user/login - 200 null application/json; charset=utf-8 3677.8409ms
+2026-02-14 09:15:43.135 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/0.41d19028929646bc.js - null null
+2026-02-14 09:15:43.152 +05:30 [INF] Sending file. Request path: '/0.41d19028929646bc.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\0.41d19028929646bc.js'
+2026-02-14 09:15:43.157 +05:30 [INF] HTTP GET /0.41d19028929646bc.js responded 200 in 18.6065 ms
+2026-02-14 09:15:43.159 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/0.41d19028929646bc.js - 200 559078 text/javascript 24.1539ms
+2026-02-14 09:15:43.270 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/assets/images/logos/dark-logo.svg - null null
+2026-02-14 09:15:43.275 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/assets/images/profile/user-1.jpg - null null
+2026-02-14 09:15:43.276 +05:30 [INF] Sending file. Request path: '/assets/images/logos/dark-logo.svg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\assets\images\logos\dark-logo.svg'
+2026-02-14 09:15:43.281 +05:30 [INF] Sending file. Request path: '/assets/images/profile/user-1.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\assets\images\profile\user-1.jpg'
+2026-02-14 09:15:43.282 +05:30 [INF] HTTP GET /assets/images/logos/dark-logo.svg responded 200 in 7.4507 ms
+2026-02-14 09:15:43.285 +05:30 [INF] HTTP GET /assets/images/profile/user-1.jpg responded 200 in 4.8411 ms
+2026-02-14 09:15:43.288 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/assets/images/logos/dark-logo.svg - 200 6625 image/svg+xml 17.8422ms
+2026-02-14 09:15:43.291 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/assets/images/profile/user-1.jpg - 200 30954 image/jpeg 15.9503ms
+2026-02-14 09:15:43.630 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/assets/images/products/s9.jpg - null null
+2026-02-14 09:15:43.630 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/assets/images/products/s6.jpg - null null
+2026-02-14 09:15:43.631 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/assets/images/products/s7.jpg - null null
+2026-02-14 09:15:43.631 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/assets/images/products/s4.jpg - null null
+2026-02-14 09:15:43.635 +05:30 [INF] Sending file. Request path: '/assets/images/products/s9.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\assets\images\products\s9.jpg'
+2026-02-14 09:15:43.638 +05:30 [INF] Sending file. Request path: '/assets/images/products/s6.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\assets\images\products\s6.jpg'
+2026-02-14 09:15:43.643 +05:30 [INF] Sending file. Request path: '/assets/images/products/s7.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\assets\images\products\s7.jpg'
+2026-02-14 09:15:43.649 +05:30 [INF] Sending file. Request path: '/assets/images/products/s4.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\assets\images\products\s4.jpg'
+2026-02-14 09:15:43.649 +05:30 [INF] HTTP GET /assets/images/products/s9.jpg responded 200 in 16.5777 ms
+2026-02-14 09:15:43.653 +05:30 [INF] HTTP GET /assets/images/products/s6.jpg responded 200 in 16.5187 ms
+2026-02-14 09:15:43.657 +05:30 [INF] HTTP GET /assets/images/products/s7.jpg responded 200 in 17.6347 ms
+2026-02-14 09:15:43.660 +05:30 [INF] HTTP GET /assets/images/products/s4.jpg responded 200 in 13.0691 ms
+2026-02-14 09:15:43.662 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/assets/images/products/s9.jpg - 200 89945 image/jpeg 32.249ms
+2026-02-14 09:15:43.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/assets/images/products/s6.jpg - 200 99247 image/jpeg 34.4289ms
+2026-02-14 09:15:43.666 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/assets/images/products/s7.jpg - 200 78225 image/jpeg 35.3703ms
+2026-02-14 09:15:43.669 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/assets/images/products/s4.jpg - 200 84198 image/jpeg 37.8718ms

@@ -1,0 +1,62 @@
+@use "@angular/material" as mat;
+@include mat.core();
+
+@import "variables";
+@import "helpers/color";
+@import "helpers/icon-size";
+
+//Theme colors
+
+@import "themecolors/default_theme";
+@include mat.all-component-themes($bluetheme);
+
+//container layout
+@import "overrides/materialoverrides";
+@import "container";
+@import "layouts/layouts";
+@import "grid/grid";
+@import "helpers/custom-flex";
+@import "helpers/index";
+
+
+// pages
+@import "pages/dashboards";
+@import "pages/auth";
+
+
+//for spinner
+.center {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    // background: red;
+  }
+  
+  
+  .overlay{
+    height:100vh;
+    width:100%;
+    background-color:rgba(0, 0, 0, 0.286);
+    z-index:    10;
+    top:        0; 
+    left:       0; 
+    position:   fixed;
+  }
+  
+  .mat-mdc-snack-bar-container {
+  z-index: 2000 !important;
+}
+
+  
+//spinner
+:host ::ng-deep .custom-spinner circle{   
+    stroke: #e5e7e9;
+  }
+  //end spinner
+
+//   html .bg-light-secondary {
+//     background-color: rgb(68, 183, 247, .15) !important;
+// }

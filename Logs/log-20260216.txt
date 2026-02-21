@@ -1,0 +1,460 @@
+2026-02-16 21:08:10.599 +05:30 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-16 21:08:11.753 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-16 21:08:11.901 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/user/login - null null
+2026-02-16 21:08:12.094 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:12.135 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-16 21:08:12.184 +05:30 [INF] HTTP OPTIONS /api/user/login responded 204 in 100.9695 ms
+2026-02-16 21:08:12.285 +05:30 [INF] Hosting environment: Development
+2026-02-16 21:08:12.450 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/user/login - 204 null null 578.2433ms
+2026-02-16 21:08:12.534 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-16 21:08:12.552 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/user/login - application/json 38
+2026-02-16 21:08:12.575 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:12.581 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-16 21:08:16.661 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-16 21:08:16.715 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AdminDashboard.DtoModels.LoginRequest) on controller AdminDashboard.Controllers.UserController (AdminDashboard).
+2026-02-16 21:08:29.269 +05:30 [INF] Executed DbCommand (408ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2026-02-16 21:08:30.316 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[AdminDashboard.DtoModels.LoginData, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 21:08:30.431 +05:30 [INF] Executed action AdminDashboard.Controllers.UserController.Login (AdminDashboard) in 13693.3008ms
+2026-02-16 21:08:30.446 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-16 21:08:30.459 +05:30 [INF] HTTP POST /api/user/login responded 200 in 17884.5241 ms
+2026-02-16 21:08:30.524 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/user/login - 200 null application/json; charset=utf-8 17971.7362ms
+2026-02-16 21:08:35.623 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - null null
+2026-02-16 21:08:35.628 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:35.630 +05:30 [INF] HTTP OPTIONS /api/routeStopMapping responded 204 in 2.9289 ms
+2026-02-16 21:08:35.635 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - 204 null null 12.331ms
+2026-02-16 21:08:35.640 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - null null
+2026-02-16 21:08:35.643 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:35.757 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-16 21:08:35.766 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStopMapping"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopMappingController (AdminDashboard).
+2026-02-16 21:08:36.183 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [s0].[RouteStopId], [s0].[PlannedArrivalTime], [s0].[RouteId], [s0].[StopId], [s0].[StopOrder], [s0].[StopId0], [s0].[CompanyId], [s0].[CreatedAt], [s0].[Latitude], [s0].[Longitude], [s0].[Status], [s0].[StopName]
+FROM [Routes] AS [r]
+LEFT JOIN (
+    SELECT [r0].[RouteStopId], [r0].[PlannedArrivalTime], [r0].[RouteId], [r0].[StopId], [r0].[StopOrder], [s].[StopId] AS [StopId0], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+    FROM [RouteStops] AS [r0]
+    INNER JOIN [Stops] AS [s] ON [r0].[StopId] = [s].[StopId]
+) AS [s0] ON [r].[RouteId] = [s0].[RouteId]
+ORDER BY [r].[RouteId], [s0].[RouteStopId]
+2026-02-16 21:08:36.407 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.DtoModels.RouteStopMappingListDto, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 21:08:36.420 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard) in 650.4586ms
+2026-02-16 21:08:36.426 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-16 21:08:36.438 +05:30 [INF] HTTP GET /api/routeStopMapping responded 200 in 794.3112 ms
+2026-02-16 21:08:36.443 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - 200 null application/json; charset=utf-8 803.7098ms
+2026-02-16 21:08:37.815 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - null null
+2026-02-16 21:08:37.817 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping/1 - null null
+2026-02-16 21:08:37.817 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-16 21:08:37.820 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:37.825 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:37.836 +05:30 [INF] HTTP OPTIONS /api/routeStopMapping/1 responded 204 in 11.1786 ms
+2026-02-16 21:08:37.834 +05:30 [INF] HTTP OPTIONS /api/transportRoute responded 204 in 14.0026 ms
+2026-02-16 21:08:37.832 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:37.842 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping/1 - 204 null null 25.606ms
+2026-02-16 21:08:37.852 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - 204 null null 36.8475ms
+2026-02-16 21:08:37.853 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 21.2909 ms
+2026-02-16 21:08:37.867 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStopMapping/1 - null null
+2026-02-16 21:08:37.910 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/transportRoute - null null
+2026-02-16 21:08:37.922 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 104.7318ms
+2026-02-16 21:08:37.941 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:37.944 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:37.956 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-16 21:08:37.972 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetByRoute (AdminDashboard)'
+2026-02-16 21:08:37.975 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:37.992 +05:30 [INF] Route matched with {action = "GetByRoute", controller = "RouteStopMapping"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByRoute(Int32) on controller AdminDashboard.Controllers.RouteStopMappingController (AdminDashboard).
+2026-02-16 21:08:38.001 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-16 21:08:38.001 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-16 21:08:38.008 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-16 21:08:38.012 +05:30 [INF] Route matched with {action = "GetAll", controller = "TransportRoute"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TransportRouteController (AdminDashboard).
+2026-02-16 21:08:38.268 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [Routes] AS [r]
+WHERE [r].[CompanyId] = @__companyId_0
+2026-02-16 21:08:38.281 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TransportRoute, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 21:08:38.353 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__routeId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r1].[RouteId], [r1].[CompanyId], [r1].[CreatedAt], [r1].[EndLocationLat], [r1].[EndLocationLng], [r1].[Remarks], [r1].[RouteName], [r1].[StartLocationLat], [r1].[StartLocationLng], [r1].[Status], [s0].[RouteStopId], [s0].[PlannedArrivalTime], [s0].[RouteId], [s0].[StopId], [s0].[StopOrder], [s0].[StopId0], [s0].[CompanyId], [s0].[CreatedAt], [s0].[Latitude], [s0].[Longitude], [s0].[Status], [s0].[StopName]
+FROM (
+    SELECT TOP(1) [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+    FROM [Routes] AS [r]
+    WHERE [r].[RouteId] = @__routeId_0
+) AS [r1]
+LEFT JOIN (
+    SELECT [r0].[RouteStopId], [r0].[PlannedArrivalTime], [r0].[RouteId], [r0].[StopId], [r0].[StopOrder], [s].[StopId] AS [StopId0], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+    FROM [RouteStops] AS [r0]
+    INNER JOIN [Stops] AS [s] ON [r0].[StopId] = [s].[StopId]
+) AS [s0] ON [r1].[RouteId] = [s0].[RouteId]
+ORDER BY [r1].[RouteId], [s0].[RouteStopId]
+2026-02-16 21:08:38.392 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-16 21:08:38.404 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.DtoModels.RouteStopMappingDetailDto'.
+2026-02-16 21:08:38.417 +05:30 [INF] Executed action AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard) in 393.0405ms
+2026-02-16 21:08:38.425 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-16 21:08:38.427 +05:30 [INF] HTTP GET /api/transportRoute responded 200 in 482.5774 ms
+2026-02-16 21:08:38.434 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopMappingController.GetByRoute (AdminDashboard) in 433.0528ms
+2026-02-16 21:08:38.435 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/transportRoute - 200 null application/json; charset=utf-8 525.6421ms
+2026-02-16 21:08:38.436 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 21:08:38.439 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetByRoute (AdminDashboard)'
+2026-02-16 21:08:38.456 +05:30 [INF] HTTP GET /api/routeStopMapping/1 responded 200 in 514.9805 ms
+2026-02-16 21:08:38.459 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStopMapping/1 - 200 null application/json; charset=utf-8 591.5809ms
+2026-02-16 21:08:38.465 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 445.0036ms
+2026-02-16 21:08:38.471 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-16 21:08:38.473 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 498.3258 ms
+2026-02-16 21:08:38.476 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 519.9429ms
+2026-02-16 21:08:42.029 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - null null
+2026-02-16 21:08:42.042 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:42.048 +05:30 [INF] HTTP OPTIONS /api/routeStopMapping responded 204 in 6.4661 ms
+2026-02-16 21:08:42.052 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - 204 null null 23.4969ms
+2026-02-16 21:08:42.057 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - null null
+2026-02-16 21:08:42.063 +05:30 [INF] CORS policy execution successful.
+2026-02-16 21:08:42.065 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-16 21:08:42.068 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStopMapping"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopMappingController (AdminDashboard).
+2026-02-16 21:08:42.102 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [s0].[RouteStopId], [s0].[PlannedArrivalTime], [s0].[RouteId], [s0].[StopId], [s0].[StopOrder], [s0].[StopId0], [s0].[CompanyId], [s0].[CreatedAt], [s0].[Latitude], [s0].[Longitude], [s0].[Status], [s0].[StopName]
+FROM [Routes] AS [r]
+LEFT JOIN (
+    SELECT [r0].[RouteStopId], [r0].[PlannedArrivalTime], [r0].[RouteId], [r0].[StopId], [r0].[StopOrder], [s].[StopId] AS [StopId0], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+    FROM [RouteStops] AS [r0]
+    INNER JOIN [Stops] AS [s] ON [r0].[StopId] = [s].[StopId]
+) AS [s0] ON [r].[RouteId] = [s0].[RouteId]
+ORDER BY [r].[RouteId], [s0].[RouteStopId]
+2026-02-16 21:08:42.112 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.DtoModels.RouteStopMappingListDto, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 21:08:42.115 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard) in 43.606ms
+2026-02-16 21:08:42.118 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-16 21:08:42.119 +05:30 [INF] HTTP GET /api/routeStopMapping responded 200 in 56.2512 ms
+2026-02-16 21:08:42.122 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - 200 null application/json; charset=utf-8 65.1937ms
+2026-02-16 21:39:57.259 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:39:57.367 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-02-16 21:39:57.411 +05:30 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-02-16 21:39:57.494 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-02-16 21:39:57.511 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:39:57.518 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-16 21:39:57.529 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-16 21:39:57.556 +05:30 [INF] Applying migration '20251127105213_InitialCreate'.
+2026-02-16 21:39:57.629 +05:30 [ERR] Failed executing DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Companies] (
+    [CompanyId] int NOT NULL IDENTITY,
+    [CompanyName] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NULL,
+    [ContactNumber] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [Status] nvarchar(1) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    CONSTRAINT [PK_Companies] PRIMARY KEY ([CompanyId])
+);
+2026-02-16 21:43:15.608 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:43:15.684 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-16 21:43:15.703 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-16 21:47:19.782 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:47:19.838 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-02-16 21:47:19.869 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-02-16 21:47:19.967 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-02-16 21:47:19.983 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:47:19.988 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-16 21:47:19.998 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-16 21:47:20.022 +05:30 [INF] Applying migration '20251127105213_InitialCreate'.
+2026-02-16 21:47:20.068 +05:30 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Companies] (
+    [CompanyId] int NOT NULL IDENTITY,
+    [CompanyName] nvarchar(max) NOT NULL,
+    [Address] nvarchar(max) NULL,
+    [ContactNumber] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [Status] nvarchar(1) NOT NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    [UpdatedAt] datetime2 NULL,
+    CONSTRAINT [PK_Companies] PRIMARY KEY ([CompanyId])
+);
+2026-02-16 21:55:48.695 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:55:48.794 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-02-16 21:55:48.825 +05:30 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-02-16 21:55:48.905 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-02-16 21:55:48.921 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:55:48.928 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-16 21:55:48.937 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-16 21:55:48.952 +05:30 [INF] No migrations were applied. The database is already up to date.
+2026-02-16 21:55:48.958 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-02-16 21:59:26.732 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:59:26.794 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-02-16 21:59:26.819 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-02-16 21:59:26.908 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-02-16 21:59:26.922 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-02-16 21:59:26.927 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-02-16 21:59:26.935 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-02-16 21:59:26.955 +05:30 [INF] Applying migration '20260216160928_AddTripSchedule'.
+2026-02-16 21:59:27.017 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [TripSchedules] (
+    [TripScheduleId] int NOT NULL IDENTITY,
+    [TripName] nvarchar(max) NOT NULL,
+    [TripStartDate] datetime2 NOT NULL,
+    [TripEndDate] datetime2 NULL,
+    [PlannedStartTime] time NOT NULL,
+    [PlannedEndTime] time NULL,
+    [RouteId] int NOT NULL,
+    [Mon] bit NOT NULL,
+    [Tue] bit NOT NULL,
+    [Wed] bit NOT NULL,
+    [Thu] bit NOT NULL,
+    [Fri] bit NOT NULL,
+    [Sat] bit NOT NULL,
+    [Sun] bit NOT NULL,
+    [Status] nvarchar(1) NOT NULL,
+    CONSTRAINT [PK_TripSchedules] PRIMARY KEY ([TripScheduleId]),
+    CONSTRAINT [FK_TripSchedules_Routes_RouteId] FOREIGN KEY ([RouteId]) REFERENCES [Routes] ([RouteId]) ON DELETE CASCADE
+);
+2026-02-16 21:59:27.028 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_TripSchedules_RouteId] ON [TripSchedules] ([RouteId]);
+2026-02-16 21:59:27.037 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20260216160928_AddTripSchedule', N'9.0.11');
+2026-02-16 21:59:27.044 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2026-02-16 22:44:28.254 +05:30 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-16 22:44:29.043 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-16 22:44:29.338 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-16 22:44:29.361 +05:30 [INF] Hosting environment: Development
+2026-02-16 22:44:29.585 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-16 22:44:31.739 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - null null
+2026-02-16 22:44:31.835 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:44:31.841 +05:30 [INF] HTTP OPTIONS /api/routeStopMapping responded 204 in 13.2420 ms
+2026-02-16 22:44:31.863 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - 204 null null 145.8058ms
+2026-02-16 22:44:31.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - null null
+2026-02-16 22:44:31.884 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:44:31.887 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-16 22:44:34.187 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-16 22:44:34.218 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStopMapping"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopMappingController (AdminDashboard).
+2026-02-16 22:44:39.284 +05:30 [INF] Executed DbCommand (187ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [s0].[RouteStopId], [s0].[PlannedArrivalTime], [s0].[RouteId], [s0].[StopId], [s0].[StopOrder], [s0].[StopId0], [s0].[CompanyId], [s0].[CreatedAt], [s0].[Latitude], [s0].[Longitude], [s0].[Status], [s0].[StopName]
+FROM [Routes] AS [r]
+LEFT JOIN (
+    SELECT [r0].[RouteStopId], [r0].[PlannedArrivalTime], [r0].[RouteId], [r0].[StopId], [r0].[StopOrder], [s].[StopId] AS [StopId0], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+    FROM [RouteStops] AS [r0]
+    INNER JOIN [Stops] AS [s] ON [r0].[StopId] = [s].[StopId]
+) AS [s0] ON [r].[RouteId] = [s0].[RouteId]
+ORDER BY [r].[RouteId], [s0].[RouteStopId]
+2026-02-16 22:44:39.581 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.DtoModels.RouteStopMappingListDto, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:44:39.630 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard) in 5403.1298ms
+2026-02-16 22:44:39.633 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-16 22:44:39.637 +05:30 [INF] HTTP GET /api/routeStopMapping responded 200 in 7753.1290 ms
+2026-02-16 22:44:39.656 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - 200 null application/json; charset=utf-8 7784.3436ms
+2026-02-16 22:44:46.289 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/passenger-allocation - null null
+2026-02-16 22:44:46.292 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:44:46.293 +05:30 [INF] HTTP OPTIONS /api/passenger-allocation responded 204 in 1.4689 ms
+2026-02-16 22:44:46.295 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/passenger-allocation - 204 null null 5.8338ms
+2026-02-16 22:44:46.298 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/passenger-allocation - null null
+2026-02-16 22:44:46.303 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:44:46.312 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.PassengerAllocationController.GetAll (AdminDashboard)'
+2026-02-16 22:44:46.320 +05:30 [INF] Route matched with {action = "GetAll", controller = "PassengerAllocation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.PassengerAllocationController (AdminDashboard).
+2026-02-16 22:44:46.565 +05:30 [INF] Executed DbCommand (149ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RoutePassengerId], [u].[FullName] AS [PassengerName], [r0].[RouteName], [s].[StopName], [r].[Status]
+FROM [RoutePassengers] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[UserId]
+INNER JOIN [Routes] AS [r0] ON [r].[RouteId] = [r0].[RouteId]
+INNER JOIN [Stops] AS [s] ON [r].[StopId] = [s].[StopId]
+WHERE [r].[CompanyId] = @__companyId_0
+2026-02-16 22:44:46.573 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType29`5[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:44:46.589 +05:30 [INF] Executed action AdminDashboard.Controllers.PassengerAllocationController.GetAll (AdminDashboard) in 265.2431ms
+2026-02-16 22:44:46.593 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.PassengerAllocationController.GetAll (AdminDashboard)'
+2026-02-16 22:44:46.595 +05:30 [INF] HTTP GET /api/passenger-allocation responded 200 in 291.9817 ms
+2026-02-16 22:44:46.599 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/passenger-allocation - 200 null application/json; charset=utf-8 300.6309ms
+2026-02-16 22:46:53.927 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/passenger-allocation - null null
+2026-02-16 22:46:53.931 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:46:53.932 +05:30 [INF] HTTP OPTIONS /api/passenger-allocation responded 204 in 1.2973 ms
+2026-02-16 22:46:53.935 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/passenger-allocation - 204 null null 77.0223ms
+2026-02-16 22:46:53.939 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/passenger-allocation - null null
+2026-02-16 22:46:53.943 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:46:53.949 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.PassengerAllocationController.GetAll (AdminDashboard)'
+2026-02-16 22:46:53.950 +05:30 [INF] Route matched with {action = "GetAll", controller = "PassengerAllocation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.PassengerAllocationController (AdminDashboard).
+2026-02-16 22:46:54.117 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RoutePassengerId], [u].[FullName] AS [PassengerName], [r0].[RouteName], [s].[StopName], [r].[Status]
+FROM [RoutePassengers] AS [r]
+INNER JOIN [Users] AS [u] ON [r].[UserId] = [u].[UserId]
+INNER JOIN [Routes] AS [r0] ON [r].[RouteId] = [r0].[RouteId]
+INNER JOIN [Stops] AS [s] ON [r].[StopId] = [s].[StopId]
+WHERE [r].[CompanyId] = @__companyId_0
+2026-02-16 22:46:54.121 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType29`5[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:46:54.129 +05:30 [INF] Executed action AdminDashboard.Controllers.PassengerAllocationController.GetAll (AdminDashboard) in 175.613ms
+2026-02-16 22:46:54.145 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.PassengerAllocationController.GetAll (AdminDashboard)'
+2026-02-16 22:46:54.148 +05:30 [INF] HTTP GET /api/passenger-allocation responded 200 in 204.4832 ms
+2026-02-16 22:46:54.153 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/passenger-allocation - 200 null application/json; charset=utf-8 213.987ms
+2026-02-16 22:46:55.761 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-16 22:46:55.767 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:46:55.769 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 1.7631 ms
+2026-02-16 22:46:55.772 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 11.3698ms
+2026-02-16 22:46:55.779 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-16 22:46:55.783 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:46:55.792 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:46:55.799 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-16 22:46:55.872 +05:30 [INF] Executed DbCommand (42ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-16 22:46:55.877 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType30`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:46:55.888 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 86.2576ms
+2026-02-16 22:46:55.890 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:46:55.891 +05:30 [INF] HTTP GET /api/trips responded 200 in 108.9028 ms
+2026-02-16 22:46:55.893 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 113.9496ms
+2026-02-16 22:47:14.960 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-16 22:47:14.964 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:47:14.965 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 1.3641 ms
+2026-02-16 22:47:14.968 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 8.1768ms
+2026-02-16 22:47:14.975 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-16 22:47:14.978 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:47:14.979 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:47:14.980 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-16 22:47:14.993 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-16 22:47:14.997 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType30`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:47:15.000 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 17.3426ms
+2026-02-16 22:47:15.001 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:47:15.003 +05:30 [INF] HTTP GET /api/trips responded 200 in 25.1153 ms
+2026-02-16 22:47:15.005 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 30.3532ms
+2026-02-16 22:52:06.799 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-16 22:52:06.805 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:52:06.806 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 1.6357 ms
+2026-02-16 22:52:06.809 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 69.6928ms
+2026-02-16 22:52:06.814 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-16 22:52:06.817 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:52:06.821 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:52:06.822 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-16 22:52:06.925 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-16 22:52:06.931 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType30`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:52:06.937 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 112.3511ms
+2026-02-16 22:52:06.940 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:52:06.942 +05:30 [INF] HTTP GET /api/trips responded 200 in 124.7092 ms
+2026-02-16 22:52:06.945 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 130.9016ms
+2026-02-16 22:53:49.026 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-16 22:53:49.029 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:53:49.031 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 1.3815 ms
+2026-02-16 22:53:49.033 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 37.035ms
+2026-02-16 22:53:49.036 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-16 22:53:49.039 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:53:49.041 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:53:49.042 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-16 22:53:49.059 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-16 22:53:49.063 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType30`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:53:49.066 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 21.5626ms
+2026-02-16 22:53:49.068 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:53:49.070 +05:30 [INF] HTTP GET /api/trips responded 200 in 31.1736 ms
+2026-02-16 22:53:49.073 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 36.6541ms
+2026-02-16 22:54:41.276 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-16 22:54:41.279 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:54:41.281 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 1.6198 ms
+2026-02-16 22:54:41.284 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 42.7017ms
+2026-02-16 22:54:41.288 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-16 22:54:41.291 +05:30 [INF] CORS policy execution successful.
+2026-02-16 22:54:41.292 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:54:41.294 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-16 22:54:41.327 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-16 22:54:41.332 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType30`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-16 22:54:41.337 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 40.5837ms
+2026-02-16 22:54:41.339 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-16 22:54:41.340 +05:30 [INF] HTTP GET /api/trips responded 200 in 49.0396 ms
+2026-02-16 22:54:41.342 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 54.2236ms
