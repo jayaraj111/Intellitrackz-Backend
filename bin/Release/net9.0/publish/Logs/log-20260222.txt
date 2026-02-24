@@ -1,0 +1,492 @@
+2026-02-22 17:28:04.527 +05:30 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 17:28:04.730 +05:30 [INF] Now listening on: http://localhost:5000
+2026-02-22 17:28:04.735 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 17:28:04.737 +05:30 [INF] Hosting environment: Production
+2026-02-22 17:28:04.767 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish
+2026-02-22 17:33:14.735 +05:30 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-22 17:33:14.888 +05:30 [INF] Now listening on: http://localhost:5000
+2026-02-22 17:33:14.892 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-22 17:33:14.893 +05:30 [INF] Hosting environment: Production
+2026-02-22 17:33:14.895 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish
+2026-02-22 17:33:20.172 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-02-22 17:33:20.208 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-22 17:33:21.734 +05:30 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2026-02-22 17:33:21.822 +05:30 [INF] Sending file. Request path: '/index.html'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\index.html'
+2026-02-22 17:33:21.827 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/polyfills.6ec943b2ef42929d.js - null null
+2026-02-22 17:33:21.827 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/runtime.8424d6dfa4184b3d.js - null null
+2026-02-22 17:33:21.827 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/main.ace06afcb8d4a4d2.js - null null
+2026-02-22 17:33:21.830 +05:30 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2026-02-22 17:33:21.848 +05:30 [INF] HTTP GET /index.html responded 200 in 1638.5126 ms
+2026-02-22 17:33:21.885 +05:30 [INF] Sending file. Request path: '/runtime.8424d6dfa4184b3d.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\runtime.8424d6dfa4184b3d.js'
+2026-02-22 17:33:21.899 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/index.html - 200 123095 text/html 1729.3836ms
+2026-02-22 17:33:21.901 +05:30 [INF] HTTP GET /runtime.8424d6dfa4184b3d.js responded 200 in 66.5934 ms
+2026-02-22 17:33:21.914 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/runtime.8424d6dfa4184b3d.js - 200 3451 text/javascript 88.0244ms
+2026-02-22 17:33:21.915 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/styles.c14e10268374371b.css - null null
+2026-02-22 17:33:21.933 +05:30 [INF] Sending file. Request path: '/polyfills.6ec943b2ef42929d.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\polyfills.6ec943b2ef42929d.js'
+2026-02-22 17:33:21.938 +05:30 [INF] HTTP GET /polyfills.6ec943b2ef42929d.js responded 200 in 106.1125 ms
+2026-02-22 17:33:21.940 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/polyfills.6ec943b2ef42929d.js - 200 34814 text/javascript 114.7521ms
+2026-02-22 17:33:21.962 +05:30 [INF] Sending file. Request path: '/styles.c14e10268374371b.css'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\styles.c14e10268374371b.css'
+2026-02-22 17:33:21.966 +05:30 [INF] HTTP GET /styles.c14e10268374371b.css responded 200 in 47.6451 ms
+2026-02-22 17:33:21.970 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/styles.c14e10268374371b.css - 200 441221 text/css 55.2177ms
+2026-02-22 17:33:22.584 +05:30 [INF] Sending file. Request path: '/main.ace06afcb8d4a4d2.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\main.ace06afcb8d4a4d2.js'
+2026-02-22 17:33:22.586 +05:30 [INF] HTTP GET /main.ace06afcb8d4a4d2.js responded 200 in 750.2847 ms
+2026-02-22 17:33:22.589 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/main.ace06afcb8d4a4d2.js - 200 3266279 text/javascript 763.6342ms
+2026-02-22 17:33:22.800 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/842.09acc32fe8ae1d67.js - null null
+2026-02-22 17:33:22.808 +05:30 [INF] Sending file. Request path: '/842.09acc32fe8ae1d67.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\842.09acc32fe8ae1d67.js'
+2026-02-22 17:33:22.815 +05:30 [INF] HTTP GET /842.09acc32fe8ae1d67.js responded 200 in 9.7983 ms
+2026-02-22 17:33:22.821 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/842.09acc32fe8ae1d67.js - 200 7073 text/javascript 20.2211ms
+2026-02-22 17:33:22.857 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/8.eb3f3c02544c50dc.js - null null
+2026-02-22 17:33:22.979 +05:30 [INF] Sending file. Request path: '/8.eb3f3c02544c50dc.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\8.eb3f3c02544c50dc.js'
+2026-02-22 17:33:22.988 +05:30 [INF] HTTP GET /8.eb3f3c02544c50dc.js responded 200 in 125.2069 ms
+2026-02-22 17:33:22.995 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/8.eb3f3c02544c50dc.js - 200 63858 text/javascript 138.2063ms
+2026-02-22 17:33:25.019 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - null null
+2026-02-22 17:33:25.028 +05:30 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\favicon.ico'
+2026-02-22 17:33:25.035 +05:30 [INF] HTTP GET /favicon.ico responded 200 in 13.8071 ms
+2026-02-22 17:33:25.038 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 200 948 image/x-icon 18.6956ms
+2026-02-22 17:33:27.045 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/user/login - application/json 38
+2026-02-22 17:33:27.064 +05:30 [INF] CORS policy execution successful.
+2026-02-22 17:33:27.070 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-22 17:33:27.118 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AdminDashboard.DtoModels.LoginRequest) on controller AdminDashboard.Controllers.UserController (AdminDashboard).
+2026-02-22 17:33:33.609 +05:30 [INF] Executed DbCommand (243ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2026-02-22 17:33:34.063 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[AdminDashboard.DtoModels.LoginData, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:34.114 +05:30 [INF] Executed action AdminDashboard.Controllers.UserController.Login (AdminDashboard) in 6990.4904ms
+2026-02-22 17:33:34.119 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-22 17:33:34.121 +05:30 [INF] HTTP POST /api/user/login responded 200 in 7059.7457 ms
+2026-02-22 17:33:34.131 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/user/login - 200 null application/json; charset=utf-8 7085.6387ms
+2026-02-22 17:33:34.145 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/0.41d19028929646bc.js - null null
+2026-02-22 17:33:34.224 +05:30 [INF] Sending file. Request path: '/0.41d19028929646bc.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\0.41d19028929646bc.js'
+2026-02-22 17:33:34.227 +05:30 [INF] HTTP GET /0.41d19028929646bc.js responded 200 in 75.3211 ms
+2026-02-22 17:33:34.230 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/0.41d19028929646bc.js - 200 559078 text/javascript 84.177ms
+2026-02-22 17:33:34.318 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/assets/images/logos/dark-logo.svg - null null
+2026-02-22 17:33:34.319 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/assets/images/profile/user-1.jpg - null null
+2026-02-22 17:33:34.350 +05:30 [INF] Sending file. Request path: '/assets/images/logos/dark-logo.svg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\assets\images\logos\dark-logo.svg'
+2026-02-22 17:33:34.355 +05:30 [INF] HTTP GET /assets/images/logos/dark-logo.svg responded 200 in 12.2406 ms
+2026-02-22 17:33:34.359 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/assets/images/logos/dark-logo.svg - 200 6625 image/svg+xml 40.2996ms
+2026-02-22 17:33:34.368 +05:30 [INF] Sending file. Request path: '/assets/images/profile/user-1.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\assets\images\profile\user-1.jpg'
+2026-02-22 17:33:34.371 +05:30 [INF] HTTP GET /assets/images/profile/user-1.jpg responded 200 in 24.6133 ms
+2026-02-22 17:33:34.374 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/assets/images/profile/user-1.jpg - 200 30954 image/jpeg 54.9808ms
+2026-02-22 17:33:34.676 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/assets/images/products/s6.jpg - null null
+2026-02-22 17:33:34.677 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/assets/images/products/s9.jpg - null null
+2026-02-22 17:33:34.677 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/assets/images/products/s7.jpg - null null
+2026-02-22 17:33:34.677 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/assets/images/products/s4.jpg - null null
+2026-02-22 17:33:34.722 +05:30 [INF] Sending file. Request path: '/assets/images/products/s9.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\assets\images\products\s9.jpg'
+2026-02-22 17:33:34.725 +05:30 [INF] Sending file. Request path: '/assets/images/products/s7.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\assets\images\products\s7.jpg'
+2026-02-22 17:33:34.758 +05:30 [INF] HTTP GET /assets/images/products/s7.jpg responded 200 in 62.2982 ms
+2026-02-22 17:33:34.769 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/assets/images/products/s7.jpg - 200 78225 image/jpeg 91.9042ms
+2026-02-22 17:33:34.755 +05:30 [INF] HTTP GET /assets/images/products/s9.jpg responded 200 in 71.1386 ms
+2026-02-22 17:33:34.741 +05:30 [INF] Sending file. Request path: '/assets/images/products/s4.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\assets\images\products\s4.jpg'
+2026-02-22 17:33:34.783 +05:30 [INF] HTTP GET /assets/images/products/s4.jpg responded 200 in 64.4819 ms
+2026-02-22 17:33:34.778 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/assets/images/products/s9.jpg - 200 89945 image/jpeg 101.2491ms
+2026-02-22 17:33:34.744 +05:30 [INF] Sending file. Request path: '/assets/images/products/s6.jpg'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\assets\images\products\s6.jpg'
+2026-02-22 17:33:34.786 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/assets/images/products/s4.jpg - 200 84198 image/jpeg 108.8801ms
+2026-02-22 17:33:34.794 +05:30 [INF] HTTP GET /assets/images/products/s6.jpg responded 200 in 112.7386 ms
+2026-02-22 17:33:34.804 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/assets/images/products/s6.jpg - 200 99247 image/jpeg 127.7214ms
+2026-02-22 17:33:37.826 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/463.ab242c65af422652.js - null null
+2026-02-22 17:33:37.826 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/675.d585ae08dd46475a.js - null null
+2026-02-22 17:33:37.901 +05:30 [INF] Sending file. Request path: '/463.ab242c65af422652.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\463.ab242c65af422652.js'
+2026-02-22 17:33:37.907 +05:30 [INF] HTTP GET /463.ab242c65af422652.js responded 200 in 75.8358 ms
+2026-02-22 17:33:37.918 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/463.ab242c65af422652.js - 200 34353 text/javascript 91.6498ms
+2026-02-22 17:33:38.136 +05:30 [INF] Sending file. Request path: '/675.d585ae08dd46475a.js'. Physical path: 'D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\bin\Release\net9.0\publish\wwwroot\675.d585ae08dd46475a.js'
+2026-02-22 17:33:38.142 +05:30 [INF] HTTP GET /675.d585ae08dd46475a.js responded 200 in 275.1047 ms
+2026-02-22 17:33:38.146 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/675.d585ae08dd46475a.js - 200 474594 text/javascript 319.8707ms
+2026-02-22 17:33:39.203 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips - null null
+2026-02-22 17:33:39.314 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:33:39.321 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:39.432 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-22 17:33:39.439 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType24`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:39.456 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 130.9941ms
+2026-02-22 17:33:39.461 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:33:39.463 +05:30 [INF] HTTP GET /api/trips responded 200 in 238.6575 ms
+2026-02-22 17:33:39.466 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips - 200 null application/json; charset=utf-8 262.83ms
+2026-02-22 17:33:58.009 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - null null
+2026-02-22 17:33:58.031 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.048 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:58.209 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:33:58.215 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:58.219 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=co - null null
+2026-02-22 17:33:58.228 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.229 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:58.245 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:33:58.252 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:58.260 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 198.156ms
+2026-02-22 17:33:58.260 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 27.0939ms
+2026-02-22 17:33:58.261 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.263 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.265 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 242.8849 ms
+2026-02-22 17:33:58.266 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 40.3365 ms
+2026-02-22 17:33:58.268 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - 200 null application/json; charset=utf-8 258.8747ms
+2026-02-22 17:33:58.271 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=co - 200 null application/json; charset=utf-8 51.4734ms
+2026-02-22 17:33:58.467 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=com - null null
+2026-02-22 17:33:58.478 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.486 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:58.503 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:33:58.517 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:58.521 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 21.4801ms
+2026-02-22 17:33:58.525 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.530 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 52.3876 ms
+2026-02-22 17:33:58.533 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=com - 200 null application/json; charset=utf-8 66.2376ms
+2026-02-22 17:33:58.820 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=comp - null null
+2026-02-22 17:33:58.825 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.826 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:58.832 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:33:58.842 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:58.844 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 15.1373ms
+2026-02-22 17:33:58.846 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:58.848 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 23.7768 ms
+2026-02-22 17:33:58.850 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=comp - 200 null application/json; charset=utf-8 29.934ms
+2026-02-22 17:33:59.363 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=com - null null
+2026-02-22 17:33:59.377 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:59.381 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:59.403 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:33:59.418 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:59.422 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 25.1643ms
+2026-02-22 17:33:59.430 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:59.433 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 58.2023 ms
+2026-02-22 17:33:59.437 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=com - 200 null application/json; charset=utf-8 74.4942ms
+2026-02-22 17:33:59.574 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=co - null null
+2026-02-22 17:33:59.585 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:59.588 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:59.610 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:33:59.627 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:59.630 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 28.3382ms
+2026-02-22 17:33:59.633 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:59.636 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 52.7966 ms
+2026-02-22 17:33:59.642 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=co - 200 null application/json; charset=utf-8 68.0687ms
+2026-02-22 17:33:59.849 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - null null
+2026-02-22 17:33:59.855 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:59.858 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:33:59.870 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:33:59.883 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:33:59.887 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 21.5513ms
+2026-02-22 17:33:59.894 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:33:59.897 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 42.6610 ms
+2026-02-22 17:33:59.900 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - 200 null application/json; charset=utf-8 51.4755ms
+2026-02-22 17:34:01.057 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips - null null
+2026-02-22 17:34:01.068 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:01.075 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:01.092 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-22 17:34:01.101 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType24`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:01.110 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 25.1215ms
+2026-02-22 17:34:01.113 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:01.114 +05:30 [INF] HTTP GET /api/trips responded 200 in 47.4144 ms
+2026-02-22 17:34:01.116 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips - 200 null application/json; charset=utf-8 58.7298ms
+2026-02-22 17:34:26.229 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - null null
+2026-02-22 17:34:26.247 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:26.253 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:26.272 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:26.294 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:26.300 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 33.1417ms
+2026-02-22 17:34:26.303 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:26.304 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - null null
+2026-02-22 17:34:26.306 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 60.0721 ms
+2026-02-22 17:34:26.310 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:26.317 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:26.311 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - 200 null application/json; charset=utf-8 82.4516ms
+2026-02-22 17:34:26.327 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:26.339 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:26.344 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 22.6584ms
+2026-02-22 17:34:26.345 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:26.347 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 37.9981 ms
+2026-02-22 17:34:26.350 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=c - 200 null application/json; charset=utf-8 45.471ms
+2026-02-22 17:34:29.016 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips - null null
+2026-02-22 17:34:29.025 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:29.034 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:29.052 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-22 17:34:29.068 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType24`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:29.073 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 29.9896ms
+2026-02-22 17:34:29.075 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:29.076 +05:30 [INF] HTTP GET /api/trips responded 200 in 51.3357 ms
+2026-02-22 17:34:29.079 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips - 200 null application/json; charset=utf-8 62.3091ms
+2026-02-22 17:34:32.996 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=2 - null null
+2026-02-22 17:34:33.008 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:33.014 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:33.022 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:33.125 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:33.139 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 120.2074ms
+2026-02-22 17:34:33.142 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:33.144 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 137.8810 ms
+2026-02-22 17:34:33.146 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=2 - 200 null application/json; charset=utf-8 149.9901ms
+2026-02-22 17:34:33.325 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=20 - null null
+2026-02-22 17:34:33.329 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:33.330 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:33.335 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:33.340 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:33.344 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 11.3982ms
+2026-02-22 17:34:33.347 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:33.348 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 20.2370 ms
+2026-02-22 17:34:33.350 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=20 - 200 null application/json; charset=utf-8 25.1205ms
+2026-02-22 17:34:33.594 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=202 - null null
+2026-02-22 17:34:33.598 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:33.599 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:33.604 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:33.611 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:33.613 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 11.7316ms
+2026-02-22 17:34:33.615 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:33.616 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 18.6087 ms
+2026-02-22 17:34:33.618 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=202 - 200 null application/json; charset=utf-8 23.4582ms
+2026-02-22 17:34:34.434 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=2024 - null null
+2026-02-22 17:34:34.443 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:34.445 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:34.452 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:34.461 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:34.464 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 15.4397ms
+2026-02-22 17:34:34.466 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:34.467 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 29.9194 ms
+2026-02-22 17:34:34.470 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=2024 - 200 null application/json; charset=utf-8 36.3328ms
+2026-02-22 17:34:35.173 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=202 - null null
+2026-02-22 17:34:35.176 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:35.178 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:35.186 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:35.196 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:35.199 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 18.0485ms
+2026-02-22 17:34:35.203 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:35.208 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 32.3970 ms
+2026-02-22 17:34:35.211 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=202 - 200 null application/json; charset=utf-8 37.7821ms
+2026-02-22 17:34:35.385 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=20 - null null
+2026-02-22 17:34:35.390 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:35.391 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:35.397 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:35.409 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:35.412 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 17.2461ms
+2026-02-22 17:34:35.415 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:35.416 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 27.4541 ms
+2026-02-22 17:34:35.419 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=20 - 200 null application/json; charset=utf-8 33.8233ms
+2026-02-22 17:34:35.767 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=2 - null null
+2026-02-22 17:34:35.772 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:35.775 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:35.785 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:35.814 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:35.816 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 35.5322ms
+2026-02-22 17:34:35.818 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:35.822 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 50.8328 ms
+2026-02-22 17:34:35.825 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=2 - 200 null application/json; charset=utf-8 58.5151ms
+2026-02-22 17:34:37.024 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips - null null
+2026-02-22 17:34:37.031 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:37.034 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:37.050 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-22 17:34:37.064 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType24`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:37.069 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 21.7625ms
+2026-02-22 17:34:37.075 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:37.077 +05:30 [INF] HTTP GET /api/trips responded 200 in 45.9318 ms
+2026-02-22 17:34:37.079 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips - 200 null application/json; charset=utf-8 54.3506ms
+2026-02-22 17:34:39.256 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=5 - null null
+2026-02-22 17:34:39.268 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:39.275 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:39.291 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:39.300 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:39.307 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 20.2506ms
+2026-02-22 17:34:39.310 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:39.312 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 45.9595 ms
+2026-02-22 17:34:39.315 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=5 - 200 null application/json; charset=utf-8 59.6325ms
+2026-02-22 17:34:41.588 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips - null null
+2026-02-22 17:34:41.606 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:41.612 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:41.637 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-22 17:34:41.651 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType24`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:41.659 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 28.0633ms
+2026-02-22 17:34:41.663 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:41.670 +05:30 [INF] HTTP GET /api/trips responded 200 in 65.0683 ms
+2026-02-22 17:34:41.673 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips - 200 null application/json; charset=utf-8 84.8797ms
+2026-02-22 17:34:46.480 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=m - null null
+2026-02-22 17:34:46.485 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:46.486 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:46.493 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:46.506 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:46.513 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 23.301ms
+2026-02-22 17:34:46.515 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:46.517 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 32.8935 ms
+2026-02-22 17:34:46.520 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=m - 200 null application/json; charset=utf-8 39.4447ms
+2026-02-22 17:34:47.207 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=mo - null null
+2026-02-22 17:34:47.220 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:47.227 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:47.247 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:47.271 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:47.281 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 41.8971ms
+2026-02-22 17:34:47.285 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:47.287 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 67.0794 ms
+2026-02-22 17:34:47.289 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=mo - 200 null application/json; charset=utf-8 82.0009ms
+2026-02-22 17:34:47.549 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=mor - null null
+2026-02-22 17:34:47.561 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:47.567 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:47.580 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:47.597 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:47.602 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 28.305ms
+2026-02-22 17:34:47.606 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:47.610 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 49.9433 ms
+2026-02-22 17:34:47.614 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=mor - 200 null application/json; charset=utf-8 64.7737ms
+2026-02-22 17:34:51.612 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=mo - null null
+2026-02-22 17:34:51.623 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:51.630 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:51.651 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:51.672 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:51.677 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 30.5166ms
+2026-02-22 17:34:51.680 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:51.682 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 60.3331 ms
+2026-02-22 17:34:51.684 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=mo - 200 null application/json; charset=utf-8 72.661ms
+2026-02-22 17:34:51.915 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips/search?q=m - null null
+2026-02-22 17:34:51.926 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:51.930 +05:30 [INF] Route matched with {action = "Search", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(System.String) on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:51.951 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32), @__q_1_contains='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[ActualEndTime], [t].[ActualStartTime], [t].[CompanyId], [t].[CreatedAt], [t].[DriverId], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[SessionName], [t].[Status], [t].[TripDate], [t].[VehicleId], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0 AND (LOWER([t].[SessionName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([r].[RouteName]) LIKE @__q_1_contains ESCAPE N'\' OR LOWER([u].[FullName]) LIKE @__q_1_contains ESCAPE N'\')
+2026-02-22 17:34:51.965 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Trip, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:51.968 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.Search (AdminDashboard) in 22.6093ms
+2026-02-22 17:34:51.974 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.Search (AdminDashboard)'
+2026-02-22 17:34:51.977 +05:30 [INF] HTTP GET /api/trips/search responded 200 in 51.3711 ms
+2026-02-22 17:34:51.980 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips/search?q=m - 200 null application/json; charset=utf-8 65.808ms
+2026-02-22 17:34:53.280 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/trips - null null
+2026-02-22 17:34:53.295 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:53.300 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-22 17:34:53.317 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], [v].[RegistrationNumber] AS [Vehicle], [u].[FullName] AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+INNER JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+INNER JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+2026-02-22 17:34:53.328 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType24`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-22 17:34:53.333 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 19.2903ms
+2026-02-22 17:34:53.335 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-22 17:34:53.336 +05:30 [INF] HTTP GET /api/trips responded 200 in 42.1948 ms
+2026-02-22 17:34:53.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/trips - 200 null application/json; charset=utf-8 62.7593ms

@@ -713,6 +713,22 @@
   },
   {
     "ContainingType": "AdminDashboard.Controllers.TripController",
+    "Method": "GetTripPath",
+    "RelativePath": "api/trips/{tripId}/route-path",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tripId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminDashboard.Controllers.TripController",
     "Method": "GenerateTrips",
     "RelativePath": "api/trips/generate-from-schedule",
     "HttpMethod": "POST",

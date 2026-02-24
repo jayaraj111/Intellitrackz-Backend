@@ -13,32 +13,11 @@ public class TripService : ITripService
         _context = context;
     }
 
-    //public async Task<IEnumerable<object>> GetAllAsync(int companyId)
-    //{
-    //    return await _context.Trips
-    //        .Where(t => t.CompanyId == companyId)
-    //        .Include(t => t.Route)
-    //        .Include(t => t.Vehicle)
-    //        .Include(t => t.Driver)
-    //        .Select(t => new
-    //        {
-    //            t.TripId,
-    //            t.TripDate,
-    //            t.SessionName,
-    //            t.Status,
-    //            Route = t.Route!.RouteName,
-    //            Vehicle = t.Vehicle!.RegistrationNumber,
-    //            Driver = t.Driver!.FullName
-    //        })
-    //        .ToListAsync();
-    //}
     public async Task<IEnumerable<object>> GetAllAsync(int companyId)
     {
         return await _context.Trips
             .Where(t => t.CompanyId == companyId)
-            // Sort by date descending before projection
             .OrderByDescending(t => t.TripDate)
-            // Optional: Secondary sort by ID to keep latest entries first if dates match
             .ThenByDescending(t => t.TripId)
             .Select(t => new
             {
@@ -46,7 +25,7 @@ public class TripService : ITripService
                 t.TripDate,
                 t.SessionName,
                 t.Status,
-                // Using null-conditional access/coalescing for safety
+              
                 Route = t.Route != null ? t.Route.RouteName : "N/A",
                 Vehicle = t.Vehicle != null ? t.Vehicle.RegistrationNumber : "Not Assigned",
                 Driver = t.Driver != null ? t.Driver.FullName : "Not Assigned"
@@ -87,7 +66,6 @@ public class TripService : ITripService
             );
         }
 
-        // IMPORTANT: Project to the same shape as GetAllAsync
         return await query
             .OrderByDescending(t => t.TripDate)
             .Select(t => new
@@ -160,14 +138,9 @@ public class TripService : ITripService
         return true;
     }
 
-    public async Task<int> GenerateFromScheduleAsync(
-     int scheduleId,
-     DateTime startDate,
-     DateTime endDate,
-     int companyId)
+    public async Task<int> GenerateFromScheduleAsync(int scheduleId,DateTime startDate,DateTime endDate,int companyId)
     {
-        var schedule = await _context.TripSchedules
-            .FirstOrDefaultAsync(x => x.TripScheduleId == scheduleId);
+        var schedule = await _context.TripSchedules.FirstOrDefaultAsync(x => x.TripScheduleId == scheduleId);
 
         if (schedule == null)
             return 0;
@@ -223,4 +196,22 @@ public class TripService : ITripService
 
         return createdCount;
     }
+
+    public async Task<List<TripPathPointDto>> GetTripPathAsync(int tripId, int companyId)
+    {
+        return await _context.TripLocationLogs
+            .AsNoTracking()
+            .Where(x =>
+                x.TripId == tripId &&
+                x.CompanyId == companyId)
+            .OrderBy(x => x.LoggedAt)
+            .Select(x => new TripPathPointDto
+            {
+                Latitude = x.Latitude,
+                Longitude = x.Longitude,
+                LoggedAt = x.LoggedAt
+            })
+            .ToListAsync();
+    }
+
 }

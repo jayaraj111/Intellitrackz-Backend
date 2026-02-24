@@ -1,0 +1,1180 @@
+2026-02-24 20:54:06.980 +05:30 [INF] User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-02-24 20:54:07.896 +05:30 [INF] Now listening on: http://localhost:5046
+2026-02-24 20:54:08.194 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-24 20:54:08.346 +05:30 [INF] Hosting environment: Development
+2026-02-24 20:54:08.417 +05:30 [INF] Content root path: D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard
+2026-02-24 20:56:13.162 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/user/login - null null
+2026-02-24 20:56:13.386 +05:30 [INF] CORS policy execution successful.
+2026-02-24 20:56:13.394 +05:30 [INF] HTTP OPTIONS /api/user/login responded 204 in 54.1873 ms
+2026-02-24 20:56:13.425 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/user/login - 204 null null 298.2629ms
+2026-02-24 20:56:13.445 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/user/login - application/json 38
+2026-02-24 20:56:13.462 +05:30 [INF] CORS policy execution successful.
+2026-02-24 20:56:13.474 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-02-24 20:56:16.571 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-24 20:56:16.641 +05:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AdminDashboard.DtoModels.LoginRequest) on controller AdminDashboard.Controllers.UserController (AdminDashboard).
+2026-02-24 20:56:22.969 +05:30 [INF] Executed DbCommand (236ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[CompanyId], [u].[CreatedAt], [u].[Email], [u].[FullName], [u].[IsFirstLogin], [u].[PasswordHash], [u].[PhoneNumber], [u].[Remarks], [u].[Status], [u].[UpdatedAt], [u].[UserType], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2026-02-24 20:56:23.527 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.DtoModels.ApiResponse`1[[AdminDashboard.DtoModels.LoginData, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 20:56:23.563 +05:30 [INF] Executed action AdminDashboard.Controllers.UserController.Login (AdminDashboard) in 6912.4304ms
+2026-02-24 20:56:23.565 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.UserController.Login (AdminDashboard)'
+2026-02-24 20:56:23.568 +05:30 [INF] HTTP POST /api/user/login responded 200 in 10105.4746 ms
+2026-02-24 20:56:23.586 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/user/login - 200 null application/json; charset=utf-8 10142.2687ms
+2026-02-24 20:56:32.051 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trip-schedule - null null
+2026-02-24 20:56:32.066 +05:30 [INF] CORS policy execution successful.
+2026-02-24 20:56:32.073 +05:30 [INF] Executing endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 20:56:32.083 +05:30 [INF] Route matched with {action = "GetAll", controller = "TripSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TripScheduleController (AdminDashboard).
+2026-02-24 20:56:32.283 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripScheduleId], [t].[Fri], [t].[Mon], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[Sat], [t].[Status], [t].[Sun], [t].[Thu], [t].[TripEndDate], [t].[TripName], [t].[TripStartDate], [t].[Tue], [t].[Wed], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [TripSchedules] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+WHERE [t].[Status] = N'Y'
+2026-02-24 20:56:32.417 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TripSchedule, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 20:56:32.468 +05:30 [INF] Executed action TripScheduleController.GetAll (AdminDashboard) in 375.3358ms
+2026-02-24 20:56:32.470 +05:30 [INF] Executed endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 20:56:32.471 +05:30 [INF] HTTP GET /api/trip-schedule responded 200 in 405.7469 ms
+2026-02-24 20:56:32.473 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trip-schedule - 200 null application/json; charset=utf-8 422.5421ms
+2026-02-24 21:04:37.489 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trip-schedule - null null
+2026-02-24 21:04:37.492 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:04:37.498 +05:30 [INF] Executing endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 21:04:37.500 +05:30 [INF] Route matched with {action = "GetAll", controller = "TripSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TripScheduleController (AdminDashboard).
+2026-02-24 21:04:37.743 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripScheduleId], [t].[Fri], [t].[Mon], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[Sat], [t].[Status], [t].[Sun], [t].[Thu], [t].[TripEndDate], [t].[TripName], [t].[TripStartDate], [t].[Tue], [t].[Wed], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [TripSchedules] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+WHERE [t].[Status] = N'Y'
+2026-02-24 21:04:37.748 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TripSchedule, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:04:37.751 +05:30 [INF] Executed action TripScheduleController.GetAll (AdminDashboard) in 245.9564ms
+2026-02-24 21:04:37.753 +05:30 [INF] Executed endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 21:04:37.756 +05:30 [INF] HTTP GET /api/trip-schedule responded 200 in 263.7293 ms
+2026-02-24 21:04:37.759 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trip-schedule - 200 null application/json; charset=utf-8 270.2151ms
+2026-02-24 21:04:39.873 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:04:39.876 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:04:39.878 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.3103 ms
+2026-02-24 21:04:39.880 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 6.9481ms
+2026-02-24 21:04:39.883 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:04:39.888 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:04:39.975 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:04:39.980 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:04:40.008 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:04:40.036 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:04:40.046 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 62.5533ms
+2026-02-24 21:04:40.048 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:04:40.049 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 160.6078 ms
+2026-02-24 21:04:40.053 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 169.2915ms
+2026-02-24 21:13:11.588 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:13:11.594 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:13:11.595 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.4110 ms
+2026-02-24 21:13:11.597 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 10.2569ms
+2026-02-24 21:13:11.602 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:13:11.604 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:13:11.609 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:13:11.611 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:13:11.638 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:13:11.643 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:13:11.645 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 31.1166ms
+2026-02-24 21:13:11.646 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:13:11.647 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 43.2463 ms
+2026-02-24 21:13:11.650 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 48.4902ms
+2026-02-24 21:13:48.149 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:13:48.153 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:13:48.154 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.1341 ms
+2026-02-24 21:13:48.156 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 6.6193ms
+2026-02-24 21:13:48.199 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:13:48.201 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:13:48.204 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:13:48.205 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:13:48.217 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:13:48.221 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:13:48.223 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.4278ms
+2026-02-24 21:13:48.225 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:13:48.226 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 24.4042 ms
+2026-02-24 21:13:48.228 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 28.791ms
+2026-02-24 21:14:24.637 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:14:24.645 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:14:24.646 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.2575 ms
+2026-02-24 21:14:24.648 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 10.8539ms
+2026-02-24 21:14:24.672 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:14:24.685 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:14:24.687 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:14:24.689 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:14:24.698 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:14:24.703 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:14:24.705 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 13.9772ms
+2026-02-24 21:14:24.707 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:14:24.708 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 23.1138 ms
+2026-02-24 21:14:24.711 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 38.6653ms
+2026-02-24 21:15:24.602 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:15:24.608 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:15:24.610 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 3.3873 ms
+2026-02-24 21:15:24.615 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 12.9996ms
+2026-02-24 21:15:24.635 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:15:24.638 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:15:24.639 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:15:24.640 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:15:24.647 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:15:24.651 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:15:24.653 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 10.9253ms
+2026-02-24 21:15:24.654 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:15:24.655 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 17.6541 ms
+2026-02-24 21:15:24.657 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 21.6992ms
+2026-02-24 21:15:34.613 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:15:34.620 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:15:34.622 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 2.0894 ms
+2026-02-24 21:15:34.628 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 14.8157ms
+2026-02-24 21:15:34.636 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:15:34.643 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:15:34.646 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:15:34.648 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:15:34.659 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:15:34.664 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:15:34.666 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 12.7837ms
+2026-02-24 21:15:34.669 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:15:34.670 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 27.3052 ms
+2026-02-24 21:15:34.674 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 37.4578ms
+2026-02-24 21:16:00.893 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:16:00.898 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:16:00.900 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.6226 ms
+2026-02-24 21:16:00.906 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 12.7173ms
+2026-02-24 21:16:00.946 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:16:00.949 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:16:00.954 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:16:00.955 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:16:00.970 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:16:00.975 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:16:00.977 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.1531ms
+2026-02-24 21:16:00.980 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:16:00.982 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 32.1478 ms
+2026-02-24 21:16:00.986 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 39.3273ms
+2026-02-24 21:19:37.213 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:19:37.243 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:19:37.247 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 4.0423 ms
+2026-02-24 21:19:37.252 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 78.0546ms
+2026-02-24 21:19:37.271 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:19:37.293 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:19:37.297 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:19:37.299 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:19:37.361 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:19:37.371 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:19:37.376 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 71.9643ms
+2026-02-24 21:19:37.378 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:19:37.381 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 89.2397 ms
+2026-02-24 21:19:37.385 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 120.8108ms
+2026-02-24 21:21:16.830 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:21:16.834 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:21:16.835 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.1096 ms
+2026-02-24 21:21:16.837 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 12.1586ms
+2026-02-24 21:21:16.847 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:21:16.849 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:21:16.850 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:21:16.851 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:21:16.859 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:21:16.863 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:21:16.865 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 10.6099ms
+2026-02-24 21:21:16.866 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:21:16.867 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 17.9220 ms
+2026-02-24 21:21:16.869 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 22.9633ms
+2026-02-24 21:22:39.073 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:22:39.080 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:22:39.081 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.2262 ms
+2026-02-24 21:22:39.084 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 11.586ms
+2026-02-24 21:22:39.088 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:22:39.091 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:22:39.093 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:22:39.095 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:22:39.104 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:22:39.109 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:22:39.114 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.996ms
+2026-02-24 21:22:39.116 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:22:39.118 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 26.5231 ms
+2026-02-24 21:22:39.120 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 31.6896ms
+2026-02-24 21:22:52.237 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:22:52.241 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:22:52.243 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.6186 ms
+2026-02-24 21:22:52.245 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 8.3248ms
+2026-02-24 21:22:52.252 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:22:52.255 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:22:52.257 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:22:52.258 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:22:52.263 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:22:52.270 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:22:52.272 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.3997ms
+2026-02-24 21:22:52.274 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:22:52.275 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 20.1012 ms
+2026-02-24 21:22:52.278 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 25.5154ms
+2026-02-24 21:24:20.536 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:24:20.540 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:24:20.541 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.0945 ms
+2026-02-24 21:24:20.543 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 8.5092ms
+2026-02-24 21:24:20.556 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:24:20.559 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:24:20.563 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:24:20.565 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:24:20.576 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:24:20.583 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:24:20.585 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 16.3619ms
+2026-02-24 21:24:20.587 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:24:20.589 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 29.8759 ms
+2026-02-24 21:24:20.591 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 34.9062ms
+2026-02-24 21:24:57.054 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:24:57.063 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:24:57.065 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 2.3521 ms
+2026-02-24 21:24:57.068 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 27.0935ms
+2026-02-24 21:24:57.074 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:24:57.080 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:24:57.082 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:24:57.083 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:24:57.089 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:24:57.094 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:24:57.097 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.3632ms
+2026-02-24 21:24:57.098 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:24:57.099 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 18.8902 ms
+2026-02-24 21:24:57.101 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 26.5947ms
+2026-02-24 21:25:24.062 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:25:24.080 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:25:24.088 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 8.4804 ms
+2026-02-24 21:25:24.097 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 72.0548ms
+2026-02-24 21:25:24.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:25:24.120 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:25:24.122 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:25:24.123 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:25:24.131 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:25:24.139 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:25:24.141 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.0337ms
+2026-02-24 21:25:24.143 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:25:24.145 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 25.3976 ms
+2026-02-24 21:25:24.147 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 34.3321ms
+2026-02-24 21:26:15.646 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:26:15.649 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:26:15.650 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.0648 ms
+2026-02-24 21:26:15.652 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 42.4654ms
+2026-02-24 21:26:15.698 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:26:15.700 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:26:15.702 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:26:15.703 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:26:15.710 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:26:15.714 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:26:15.716 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 10.5695ms
+2026-02-24 21:26:15.718 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:26:15.719 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 18.7722 ms
+2026-02-24 21:26:15.721 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 23.4921ms
+2026-02-24 21:31:03.058 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:31:03.065 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:31:03.066 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.0066 ms
+2026-02-24 21:31:03.068 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 44.8742ms
+2026-02-24 21:31:03.073 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:31:03.076 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:31:03.078 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:31:03.080 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:31:03.108 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:31:03.111 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:31:03.113 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 30.8087ms
+2026-02-24 21:31:03.115 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:31:03.119 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 42.8731 ms
+2026-02-24 21:31:03.122 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 48.51ms
+2026-02-24 21:33:56.697 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:33:56.717 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:33:56.722 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 4.8184 ms
+2026-02-24 21:33:56.727 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 29.4106ms
+2026-02-24 21:33:56.739 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:33:56.745 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:33:56.749 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:33:56.753 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:33:56.760 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:33:56.765 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:33:56.768 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 12.2468ms
+2026-02-24 21:33:56.770 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:33:56.771 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 25.8411 ms
+2026-02-24 21:33:56.774 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 35.2693ms
+2026-02-24 21:34:13.192 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:34:13.196 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:34:13.201 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 4.9953 ms
+2026-02-24 21:34:13.203 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 11.7489ms
+2026-02-24 21:34:13.207 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5046/api/routeStop - application/json 107
+2026-02-24 21:34:13.217 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:34:13.223 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.Create (AdminDashboard)'
+2026-02-24 21:34:13.239 +05:30 [INF] Route matched with {action = "Create", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(AdminDashboard.Models.Stop) on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:34:13.583 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime2), @p2='?' (Precision = 10) (Scale = 7) (DbType = Decimal), @p3='?' (Precision = 10) (Scale = 7) (DbType = Decimal), @p4='?' (Size = 1), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Stops] ([CompanyId], [CreatedAt], [Latitude], [Longitude], [Status], [StopName])
+OUTPUT INSERTED.[StopId]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-02-24 21:34:13.624 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'AdminDashboard.Models.Stop'.
+2026-02-24 21:34:13.662 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.Create (AdminDashboard) in 420.1864ms
+2026-02-24 21:34:13.664 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.Create (AdminDashboard)'
+2026-02-24 21:34:13.666 +05:30 [INF] HTTP POST /api/routeStop responded 201 in 449.8341 ms
+2026-02-24 21:34:13.668 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5046/api/routeStop - 201 null application/json; charset=utf-8 460.8304ms
+2026-02-24 21:34:14.783 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:34:14.789 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:34:14.791 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:34:14.794 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:34:14.809 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:34:14.817 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:34:14.821 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 17.0982ms
+2026-02-24 21:34:14.835 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:34:14.837 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 47.2664 ms
+2026-02-24 21:34:14.840 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 56.6175ms
+2026-02-24 21:34:16.334 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop/6 - null null
+2026-02-24 21:34:16.337 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:34:16.338 +05:30 [INF] HTTP OPTIONS /api/routeStop/6 responded 204 in 1.1511 ms
+2026-02-24 21:34:16.341 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop/6 - 204 null null 6.9085ms
+2026-02-24 21:34:16.351 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop/6 - null null
+2026-02-24 21:34:16.366 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:34:16.367 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetById (AdminDashboard)'
+2026-02-24 21:34:16.377 +05:30 [INF] Route matched with {action = "GetById", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:34:16.426 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32), @__companyId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[StopId] = @__id_0 AND [s].[CompanyId] = @__companyId_1
+2026-02-24 21:34:16.437 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.Models.Stop'.
+2026-02-24 21:34:16.439 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetById (AdminDashboard) in 56.2914ms
+2026-02-24 21:34:16.441 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetById (AdminDashboard)'
+2026-02-24 21:34:16.442 +05:30 [INF] HTTP GET /api/routeStop/6 responded 200 in 76.6815 ms
+2026-02-24 21:34:16.447 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop/6 - 200 null application/json; charset=utf-8 95.8647ms
+2026-02-24 21:35:16.560 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop/6 - null null
+2026-02-24 21:35:16.570 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:35:16.572 +05:30 [INF] HTTP OPTIONS /api/routeStop/6 responded 204 in 2.3330 ms
+2026-02-24 21:35:16.577 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop/6 - 204 null null 19.8379ms
+2026-02-24 21:35:16.613 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5046/api/routeStop/6 - application/json 107
+2026-02-24 21:35:16.615 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:35:16.616 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.Update (AdminDashboard)'
+2026-02-24 21:35:16.625 +05:30 [INF] Route matched with {action = "Update", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, AdminDashboard.Models.Stop) on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:35:16.638 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32), @__companyId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[StopId] = @__id_0 AND [s].[CompanyId] = @__companyId_1
+2026-02-24 21:35:16.666 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Precision = 10) (Scale = 7) (DbType = Decimal), @p1='?' (Precision = 10) (Scale = 7) (DbType = Decimal), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Stops] SET [Latitude] = @p0, [Longitude] = @p1, [StopName] = @p2
+OUTPUT 1
+WHERE [StopId] = @p3;
+2026-02-24 21:35:16.674 +05:30 [INF] Executing OkObjectResult, writing value of type 'AdminDashboard.Models.Stop'.
+2026-02-24 21:35:16.675 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.Update (AdminDashboard) in 47.1326ms
+2026-02-24 21:35:16.677 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.Update (AdminDashboard)'
+2026-02-24 21:35:16.678 +05:30 [INF] HTTP PUT /api/routeStop/6 responded 200 in 63.4233 ms
+2026-02-24 21:35:16.680 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5046/api/routeStop/6 - 200 null application/json; charset=utf-8 67.8003ms
+2026-02-24 21:35:17.790 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:35:17.796 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:35:17.798 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.8292 ms
+2026-02-24 21:35:17.805 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 14.8195ms
+2026-02-24 21:35:17.813 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:35:17.822 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:35:17.825 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:35:17.829 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:35:17.839 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:35:17.843 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:35:17.846 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 13.9652ms
+2026-02-24 21:35:17.848 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:35:17.849 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 27.6574 ms
+2026-02-24 21:35:17.854 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 40.962ms
+2026-02-24 21:43:20.615 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:43:20.620 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:43:20.621 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.4603 ms
+2026-02-24 21:43:20.624 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 9.3759ms
+2026-02-24 21:43:20.629 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:43:20.633 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:43:20.635 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:43:20.637 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:43:20.660 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:43:20.666 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:43:20.668 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 27.1641ms
+2026-02-24 21:43:20.671 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:43:20.673 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 40.0720 ms
+2026-02-24 21:43:20.677 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 47.7673ms
+2026-02-24 21:44:08.605 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:44:08.609 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:44:08.610 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 0.9007 ms
+2026-02-24 21:44:08.612 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 6.4325ms
+2026-02-24 21:44:08.615 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:44:08.620 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:44:08.621 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:44:08.622 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:44:08.628 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:44:08.632 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:44:08.636 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.6568ms
+2026-02-24 21:44:08.638 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:44:08.639 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 19.7576 ms
+2026-02-24 21:44:08.641 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 26.1237ms
+2026-02-24 21:44:46.733 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:44:46.740 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:44:46.742 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 2.3912 ms
+2026-02-24 21:44:46.746 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 13.304ms
+2026-02-24 21:44:46.759 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:44:46.763 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:44:46.764 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:44:46.766 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:44:46.776 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:44:46.782 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:44:46.785 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 14.9532ms
+2026-02-24 21:44:46.787 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:44:46.790 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 26.9682 ms
+2026-02-24 21:44:46.793 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 33.9265ms
+2026-02-24 21:45:21.581 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:45:21.656 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:45:21.658 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 2.4661 ms
+2026-02-24 21:45:21.667 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 86.009ms
+2026-02-24 21:45:21.853 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:45:21.856 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:45:21.862 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:45:21.864 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:45:21.885 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:45:21.890 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:45:21.896 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 29.194ms
+2026-02-24 21:45:21.900 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:45:21.901 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 45.2976 ms
+2026-02-24 21:45:21.904 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 50.956ms
+2026-02-24 21:46:15.860 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:46:15.870 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:46:15.871 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.1082 ms
+2026-02-24 21:46:15.874 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 13.9304ms
+2026-02-24 21:46:15.889 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:46:15.892 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:46:15.894 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:46:15.896 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:46:15.903 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:46:15.910 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:46:15.912 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 12.9774ms
+2026-02-24 21:46:15.914 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:46:15.916 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 23.5150 ms
+2026-02-24 21:46:15.918 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 29.2632ms
+2026-02-24 21:46:31.632 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:46:31.636 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:46:31.637 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.3410 ms
+2026-02-24 21:46:31.639 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 7.1897ms
+2026-02-24 21:46:31.648 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:46:31.651 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:46:31.652 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:46:31.654 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:46:31.670 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:46:31.679 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:46:31.686 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 30.1998ms
+2026-02-24 21:46:31.689 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:46:31.690 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 38.9903 ms
+2026-02-24 21:46:31.698 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 50.3489ms
+2026-02-24 21:47:02.723 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:02.729 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:02.730 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.6734 ms
+2026-02-24 21:47:02.732 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 8.9152ms
+2026-02-24 21:47:02.735 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:02.737 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:02.739 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:02.740 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:47:02.748 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:47:02.752 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:47:02.753 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 10.6047ms
+2026-02-24 21:47:02.754 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:02.756 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 18.4467 ms
+2026-02-24 21:47:02.758 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 22.5395ms
+2026-02-24 21:47:18.599 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:18.602 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:18.604 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.4704 ms
+2026-02-24 21:47:18.606 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 7.7451ms
+2026-02-24 21:47:18.614 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:18.618 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:18.619 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:18.621 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:47:18.626 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:47:18.632 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:47:18.635 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.2745ms
+2026-02-24 21:47:18.637 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:18.638 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 20.0252 ms
+2026-02-24 21:47:18.641 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 26.2619ms
+2026-02-24 21:47:44.884 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:44.888 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:44.890 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.6631 ms
+2026-02-24 21:47:44.892 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 8.7039ms
+2026-02-24 21:47:44.908 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:44.912 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:44.915 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:44.916 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:47:44.934 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:47:44.942 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:47:44.944 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 22.438ms
+2026-02-24 21:47:44.947 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:44.949 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 36.2985 ms
+2026-02-24 21:47:44.951 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 43.1625ms
+2026-02-24 21:47:56.145 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:56.151 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:56.152 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.4588 ms
+2026-02-24 21:47:56.155 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 10.3298ms
+2026-02-24 21:47:56.164 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:47:56.169 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:47:56.174 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:56.178 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:47:56.183 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:47:56.186 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:47:56.188 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 7.2706ms
+2026-02-24 21:47:56.190 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:47:56.192 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 22.3547 ms
+2026-02-24 21:47:56.194 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 29.9606ms
+2026-02-24 21:48:18.007 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:48:18.011 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:48:18.012 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.1445 ms
+2026-02-24 21:48:18.014 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 6.7113ms
+2026-02-24 21:48:18.017 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:48:18.020 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:48:18.022 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:48:18.024 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:48:18.030 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:48:18.033 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:48:18.035 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 8.0308ms
+2026-02-24 21:48:18.037 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:48:18.039 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 19.0823 ms
+2026-02-24 21:48:18.041 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 23.9617ms
+2026-02-24 21:48:39.991 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:48:40.005 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:48:40.006 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.1329 ms
+2026-02-24 21:48:40.008 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 17.0054ms
+2026-02-24 21:48:40.012 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:48:40.017 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:48:40.019 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:48:40.020 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:48:40.025 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:48:40.028 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:48:40.030 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 8.152ms
+2026-02-24 21:48:40.033 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:48:40.035 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 17.9967 ms
+2026-02-24 21:48:40.037 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 24.7545ms
+2026-02-24 21:49:04.363 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:49:04.381 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:49:04.383 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.9629 ms
+2026-02-24 21:49:04.385 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 21.9823ms
+2026-02-24 21:49:04.393 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:49:04.398 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:49:04.399 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:49:04.401 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:49:04.413 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:49:04.418 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:49:04.420 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.0478ms
+2026-02-24 21:49:04.422 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:49:04.424 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 26.1138 ms
+2026-02-24 21:49:04.429 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 35.129ms
+2026-02-24 21:49:44.667 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:49:44.690 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:49:44.693 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 3.4981 ms
+2026-02-24 21:49:44.697 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 30.4927ms
+2026-02-24 21:49:44.713 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:49:44.716 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:49:44.718 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:49:44.721 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:49:44.729 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:49:44.733 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:49:44.736 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.3977ms
+2026-02-24 21:49:44.738 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:49:44.739 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 22.8313 ms
+2026-02-24 21:49:44.741 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 27.7501ms
+2026-02-24 21:50:20.990 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:50:21.009 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:50:21.012 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 3.2123 ms
+2026-02-24 21:50:21.019 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 29.1608ms
+2026-02-24 21:50:21.029 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:50:21.036 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:50:21.042 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:50:21.044 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:50:21.053 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:50:21.059 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:50:21.063 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 16.0971ms
+2026-02-24 21:50:21.070 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:50:21.073 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 37.3817 ms
+2026-02-24 21:50:21.075 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 46.5703ms
+2026-02-24 21:50:34.541 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:50:34.545 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:50:34.545 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 0.9400 ms
+2026-02-24 21:50:34.547 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 6.5708ms
+2026-02-24 21:50:34.550 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:50:34.554 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:50:34.555 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:50:34.558 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:50:34.562 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:50:34.565 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:50:34.566 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 5.9278ms
+2026-02-24 21:50:34.568 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:50:34.570 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 15.9918 ms
+2026-02-24 21:50:34.573 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 22.4817ms
+2026-02-24 21:50:55.687 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:50:55.692 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:50:55.694 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.2231 ms
+2026-02-24 21:50:55.695 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 8.1673ms
+2026-02-24 21:50:55.708 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:50:55.710 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:50:55.711 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:50:55.712 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:50:55.720 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:50:55.725 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:50:55.727 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 12.4175ms
+2026-02-24 21:50:55.730 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:50:55.731 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 21.0992 ms
+2026-02-24 21:50:55.735 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 27.3293ms
+2026-02-24 21:52:09.398 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:52:09.407 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:52:09.408 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 0.9360 ms
+2026-02-24 21:52:09.409 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 11.6679ms
+2026-02-24 21:52:09.417 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:52:09.419 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:52:09.421 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:52:09.421 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:52:09.428 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:52:09.432 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:52:09.434 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 10.6059ms
+2026-02-24 21:52:09.436 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:52:09.437 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 18.1457 ms
+2026-02-24 21:52:09.439 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 22.2266ms
+2026-02-24 21:52:18.555 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:52:18.560 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:52:18.561 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.3157 ms
+2026-02-24 21:52:18.563 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 8.5061ms
+2026-02-24 21:52:18.571 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:52:18.577 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:52:18.579 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:52:18.582 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:52:18.592 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:52:18.598 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:52:18.603 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.1726ms
+2026-02-24 21:52:18.606 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:52:18.607 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 30.3064 ms
+2026-02-24 21:52:18.609 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 37.6775ms
+2026-02-24 21:52:30.605 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:52:30.610 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:52:30.612 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.2770 ms
+2026-02-24 21:52:30.614 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 8.8291ms
+2026-02-24 21:52:30.617 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:52:30.619 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:52:30.621 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:52:30.622 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:52:30.629 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:52:30.633 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:52:30.636 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 9.1565ms
+2026-02-24 21:52:30.638 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:52:30.640 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 20.9940 ms
+2026-02-24 21:52:30.644 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 27.3362ms
+2026-02-24 21:53:46.995 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:53:47.039 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:53:47.040 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 0.8976 ms
+2026-02-24 21:53:47.041 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 46.2795ms
+2026-02-24 21:53:47.054 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:53:47.056 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:53:47.057 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:53:47.058 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:53:47.066 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:53:47.071 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:53:47.072 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.7107ms
+2026-02-24 21:53:47.074 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:53:47.075 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 19.3659 ms
+2026-02-24 21:53:47.077 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 23.8549ms
+2026-02-24 21:54:05.903 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:54:05.911 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:54:05.916 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 4.7455 ms
+2026-02-24 21:54:05.925 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 21.8842ms
+2026-02-24 21:54:05.934 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:54:05.938 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:54:05.941 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:54:05.943 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:54:05.954 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:54:05.959 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:54:05.964 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.9746ms
+2026-02-24 21:54:05.967 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:54:05.969 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 30.2840 ms
+2026-02-24 21:54:05.970 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 36.4736ms
+2026-02-24 21:54:17.367 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:54:17.374 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:54:17.375 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.5870 ms
+2026-02-24 21:54:17.378 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 10.5889ms
+2026-02-24 21:54:17.383 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:54:17.388 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:54:17.391 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:54:17.392 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:54:17.398 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:54:17.404 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:54:17.408 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.6713ms
+2026-02-24 21:54:17.410 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:54:17.413 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 24.4430 ms
+2026-02-24 21:54:17.415 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 32.187ms
+2026-02-24 21:55:15.441 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:55:15.455 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:55:15.456 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 1.0475 ms
+2026-02-24 21:55:15.458 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 17.4335ms
+2026-02-24 21:55:15.492 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:55:15.494 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:55:15.496 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:55:15.497 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:55:15.503 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:55:15.506 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:55:15.509 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 8.1915ms
+2026-02-24 21:55:15.510 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:55:15.513 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 19.1582 ms
+2026-02-24 21:55:15.517 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 25.0795ms
+2026-02-24 21:55:46.470 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 21:55:46.476 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:55:46.478 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 2.2156 ms
+2026-02-24 21:55:46.486 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 16.9795ms
+2026-02-24 21:55:46.504 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 21:55:46.507 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:55:46.508 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:55:46.509 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 21:55:46.518 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 21:55:46.521 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:55:46.524 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 11.0067ms
+2026-02-24 21:55:46.525 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 21:55:46.527 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 19.6435 ms
+2026-02-24 21:55:46.529 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 24.7453ms
+2026-02-24 21:55:50.151 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-24 21:55:50.160 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:55:50.165 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 5.4508 ms
+2026-02-24 21:55:50.213 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 61.96ms
+2026-02-24 21:55:50.217 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-24 21:55:50.230 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:55:50.232 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 21:55:50.238 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-24 21:55:50.380 +05:30 [INF] Executed DbCommand (47ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], CASE
+    WHEN [v].[VehicleId] IS NOT NULL THEN [v].[RegistrationNumber]
+    ELSE N'Not Assigned'
+END AS [Vehicle], CASE
+    WHEN [u].[UserId] IS NOT NULL THEN [u].[FullName]
+    ELSE N'Not Assigned'
+END AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+LEFT JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+LEFT JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+ORDER BY [t].[TripDate] DESC, [t].[TripId] DESC
+2026-02-24 21:55:50.385 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType31`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:55:50.392 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 151.2337ms
+2026-02-24 21:55:50.397 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 21:55:50.399 +05:30 [INF] HTTP GET /api/trips responded 200 in 169.2754 ms
+2026-02-24 21:55:50.401 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 183.1726ms
+2026-02-24 21:55:53.237 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trip-schedule - null null
+2026-02-24 21:55:53.244 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:55:53.246 +05:30 [INF] Executing endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 21:55:53.247 +05:30 [INF] Route matched with {action = "GetAll", controller = "TripSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TripScheduleController (AdminDashboard).
+2026-02-24 21:55:53.262 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripScheduleId], [t].[Fri], [t].[Mon], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[Sat], [t].[Status], [t].[Sun], [t].[Thu], [t].[TripEndDate], [t].[TripName], [t].[TripStartDate], [t].[Tue], [t].[Wed], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [TripSchedules] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+WHERE [t].[Status] = N'Y'
+2026-02-24 21:55:53.268 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TripSchedule, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:55:53.273 +05:30 [INF] Executed action TripScheduleController.GetAll (AdminDashboard) in 22.378ms
+2026-02-24 21:55:53.277 +05:30 [INF] Executed endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 21:55:53.280 +05:30 [INF] HTTP GET /api/trip-schedule responded 200 in 35.4055 ms
+2026-02-24 21:55:53.282 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trip-schedule - 200 null application/json; charset=utf-8 44.9253ms
+2026-02-24 21:56:47.015 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trip-schedule - null null
+2026-02-24 21:56:47.023 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:56:47.025 +05:30 [INF] Executing endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 21:56:47.027 +05:30 [INF] Route matched with {action = "GetAll", controller = "TripSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller TripScheduleController (AdminDashboard).
+2026-02-24 21:56:47.041 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripScheduleId], [t].[Fri], [t].[Mon], [t].[PlannedEndTime], [t].[PlannedStartTime], [t].[RouteId], [t].[Sat], [t].[Status], [t].[Sun], [t].[Thu], [t].[TripEndDate], [t].[TripName], [t].[TripStartDate], [t].[Tue], [t].[Wed], [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [TripSchedules] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+WHERE [t].[Status] = N'Y'
+2026-02-24 21:56:47.047 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TripSchedule, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:56:47.049 +05:30 [INF] Executed action TripScheduleController.GetAll (AdminDashboard) in 19.4501ms
+2026-02-24 21:56:47.059 +05:30 [INF] Executed endpoint 'TripScheduleController.GetAll (AdminDashboard)'
+2026-02-24 21:56:47.061 +05:30 [INF] HTTP GET /api/trip-schedule responded 200 in 37.8377 ms
+2026-02-24 21:56:47.063 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trip-schedule - 200 null application/json; charset=utf-8 50.0556ms
+2026-02-24 21:57:03.716 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-24 21:57:03.721 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:57:03.726 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 5.1506 ms
+2026-02-24 21:57:03.730 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 14.0471ms
+2026-02-24 21:57:03.735 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-24 21:57:03.743 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:57:03.747 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 21:57:03.750 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-24 21:57:03.769 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], CASE
+    WHEN [v].[VehicleId] IS NOT NULL THEN [v].[RegistrationNumber]
+    ELSE N'Not Assigned'
+END AS [Vehicle], CASE
+    WHEN [u].[UserId] IS NOT NULL THEN [u].[FullName]
+    ELSE N'Not Assigned'
+END AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+LEFT JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+LEFT JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+ORDER BY [t].[TripDate] DESC, [t].[TripId] DESC
+2026-02-24 21:57:03.777 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType31`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:57:03.780 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 26.8453ms
+2026-02-24 21:57:03.782 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 21:57:03.783 +05:30 [INF] HTTP GET /api/trips responded 200 in 39.3433 ms
+2026-02-24 21:57:03.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 49.3515ms
+2026-02-24 21:57:05.737 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - null null
+2026-02-24 21:57:05.742 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:57:05.743 +05:30 [INF] HTTP OPTIONS /api/transportRoute responded 204 in 0.8959 ms
+2026-02-24 21:57:05.747 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - 204 null null 9.6645ms
+2026-02-24 21:57:05.751 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/transportRoute - null null
+2026-02-24 21:57:05.756 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:57:05.757 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-24 21:57:05.761 +05:30 [INF] Route matched with {action = "GetAll", controller = "TransportRoute"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TransportRouteController (AdminDashboard).
+2026-02-24 21:57:05.783 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [Routes] AS [r]
+WHERE [r].[CompanyId] = @__companyId_0
+2026-02-24 21:57:05.791 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TransportRoute, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:57:05.794 +05:30 [INF] Executed action AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard) in 30.0173ms
+2026-02-24 21:57:05.798 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-24 21:57:05.799 +05:30 [INF] HTTP GET /api/transportRoute responded 200 in 43.6590 ms
+2026-02-24 21:57:05.802 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/transportRoute - 200 null application/json; charset=utf-8 50.5804ms
+2026-02-24 21:58:06.949 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/companies - null null
+2026-02-24 21:58:06.953 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:58:06.954 +05:30 [INF] HTTP OPTIONS /api/companies responded 204 in 1.3141 ms
+2026-02-24 21:58:06.956 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/companies - 204 null null 7.3169ms
+2026-02-24 21:58:06.969 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/companies - null null
+2026-02-24 21:58:06.972 +05:30 [INF] CORS policy execution successful.
+2026-02-24 21:58:06.973 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.CompaniesController.GetAll (AdminDashboard)'
+2026-02-24 21:58:06.980 +05:30 [INF] Route matched with {action = "GetAll", controller = "Companies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.CompaniesController (AdminDashboard).
+2026-02-24 21:58:07.015 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CompanyId], [c].[Address], [c].[CompanyName], [c].[ContactNumber], [c].[CreatedAt], [c].[Email], [c].[Status], [c].[UpdatedAt]
+FROM [Companies] AS [c]
+2026-02-24 21:58:07.086 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Company, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 21:58:07.091 +05:30 [INF] Executed action AdminDashboard.Controllers.CompaniesController.GetAll (AdminDashboard) in 106.6453ms
+2026-02-24 21:58:07.092 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.CompaniesController.GetAll (AdminDashboard)'
+2026-02-24 21:58:07.100 +05:30 [INF] HTTP GET /api/companies responded 200 in 128.4507 ms
+2026-02-24 21:58:07.103 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/companies - 200 null application/json; charset=utf-8 134.2445ms
+2026-02-24 22:00:13.898 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - null null
+2026-02-24 22:00:13.903 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:00:13.905 +05:30 [INF] HTTP OPTIONS /api/transportRoute responded 204 in 1.3197 ms
+2026-02-24 22:00:13.907 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - 204 null null 40.9642ms
+2026-02-24 22:00:13.910 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/transportRoute - null null
+2026-02-24 22:00:13.913 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:00:13.914 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-24 22:00:13.915 +05:30 [INF] Route matched with {action = "GetAll", controller = "TransportRoute"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TransportRouteController (AdminDashboard).
+2026-02-24 22:00:13.924 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [Routes] AS [r]
+WHERE [r].[CompanyId] = @__companyId_0
+2026-02-24 22:00:13.929 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TransportRoute, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:00:13.931 +05:30 [INF] Executed action AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard) in 13.1854ms
+2026-02-24 22:00:13.933 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-24 22:00:13.935 +05:30 [INF] HTTP GET /api/transportRoute responded 200 in 21.8515 ms
+2026-02-24 22:00:13.940 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/transportRoute - 200 null application/json; charset=utf-8 30.0092ms
+2026-02-24 22:00:15.285 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 22:00:15.294 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:00:15.297 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 3.2018 ms
+2026-02-24 22:00:15.304 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 19.6521ms
+2026-02-24 22:00:15.310 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 22:00:15.313 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:00:15.315 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 22:00:15.316 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 22:00:15.326 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 22:00:15.332 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:00:15.337 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 15.5168ms
+2026-02-24 22:00:15.339 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 22:00:15.340 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 26.6075 ms
+2026-02-24 22:00:15.343 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 32.9431ms
+2026-02-24 22:01:15.960 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - null null
+2026-02-24 22:01:15.973 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:01:15.974 +05:30 [INF] HTTP OPTIONS /api/routeStop responded 204 in 0.8998 ms
+2026-02-24 22:01:15.979 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStop - 204 null null 19.0513ms
+2026-02-24 22:01:15.988 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStop - null null
+2026-02-24 22:01:15.990 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:01:15.994 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 22:01:15.996 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStop"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopController (AdminDashboard).
+2026-02-24 22:01:16.002 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StopId], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+FROM [Stops] AS [s]
+WHERE [s].[CompanyId] = @__companyId_0
+2026-02-24 22:01:16.005 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Stop, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:01:16.008 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard) in 9.9125ms
+2026-02-24 22:01:16.011 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopController.GetAll (AdminDashboard)'
+2026-02-24 22:01:16.013 +05:30 [INF] HTTP GET /api/routeStop responded 200 in 22.4431 ms
+2026-02-24 22:01:16.015 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStop - 200 null application/json; charset=utf-8 26.752ms
+2026-02-24 22:01:17.598 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - null null
+2026-02-24 22:01:17.611 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:01:17.617 +05:30 [INF] HTTP OPTIONS /api/transportRoute responded 204 in 6.2603 ms
+2026-02-24 22:01:17.620 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/transportRoute - 204 null null 22.0286ms
+2026-02-24 22:01:17.626 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/transportRoute - null null
+2026-02-24 22:01:17.630 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:01:17.632 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-24 22:01:17.634 +05:30 [INF] Route matched with {action = "GetAll", controller = "TransportRoute"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TransportRouteController (AdminDashboard).
+2026-02-24 22:01:17.647 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status]
+FROM [Routes] AS [r]
+WHERE [r].[CompanyId] = @__companyId_0
+2026-02-24 22:01:17.652 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.TransportRoute, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:01:17.654 +05:30 [INF] Executed action AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard) in 16.0291ms
+2026-02-24 22:01:17.655 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TransportRouteController.GetAll (AdminDashboard)'
+2026-02-24 22:01:17.661 +05:30 [INF] HTTP GET /api/transportRoute responded 200 in 30.9459 ms
+2026-02-24 22:01:17.663 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/transportRoute - 200 null application/json; charset=utf-8 37.244ms
+2026-02-24 22:01:19.216 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - null null
+2026-02-24 22:01:19.230 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:01:19.232 +05:30 [INF] HTTP OPTIONS /api/routeStopMapping responded 204 in 2.5278 ms
+2026-02-24 22:01:19.236 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/routeStopMapping - 204 null null 19.8321ms
+2026-02-24 22:01:19.244 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - null null
+2026-02-24 22:01:19.248 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:01:19.250 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-24 22:01:19.260 +05:30 [INF] Route matched with {action = "GetAll", controller = "RouteStopMapping"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.RouteStopMappingController (AdminDashboard).
+2026-02-24 22:01:19.368 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[RouteId], [r].[CompanyId], [r].[CreatedAt], [r].[EndLocationLat], [r].[EndLocationLng], [r].[Remarks], [r].[RouteName], [r].[StartLocationLat], [r].[StartLocationLng], [r].[Status], [s0].[RouteStopId], [s0].[PlannedArrivalTime], [s0].[RouteId], [s0].[StopId], [s0].[StopOrder], [s0].[StopId0], [s0].[CompanyId], [s0].[CreatedAt], [s0].[Latitude], [s0].[Longitude], [s0].[Status], [s0].[StopName]
+FROM [Routes] AS [r]
+LEFT JOIN (
+    SELECT [r0].[RouteStopId], [r0].[PlannedArrivalTime], [r0].[RouteId], [r0].[StopId], [r0].[StopOrder], [s].[StopId] AS [StopId0], [s].[CompanyId], [s].[CreatedAt], [s].[Latitude], [s].[Longitude], [s].[Status], [s].[StopName]
+    FROM [RouteStops] AS [r0]
+    INNER JOIN [Stops] AS [s] ON [r0].[StopId] = [s].[StopId]
+) AS [s0] ON [r].[RouteId] = [s0].[RouteId]
+ORDER BY [r].[RouteId], [s0].[RouteStopId]
+2026-02-24 22:01:19.401 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.DtoModels.RouteStopMappingListDto, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:01:19.407 +05:30 [INF] Executed action AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard) in 142.1929ms
+2026-02-24 22:01:19.409 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.RouteStopMappingController.GetAll (AdminDashboard)'
+2026-02-24 22:01:19.411 +05:30 [INF] HTTP GET /api/routeStopMapping responded 200 in 162.3930 ms
+2026-02-24 22:01:19.413 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/routeStopMapping - 200 null application/json; charset=utf-8 168.8778ms
+2026-02-24 22:06:46.450 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/companies - null null
+2026-02-24 22:06:46.457 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:06:46.459 +05:30 [INF] HTTP OPTIONS /api/companies responded 204 in 1.4563 ms
+2026-02-24 22:06:46.462 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/companies - 204 null null 11.6321ms
+2026-02-24 22:06:46.473 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/companies - null null
+2026-02-24 22:06:46.476 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:06:46.478 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.CompaniesController.GetAll (AdminDashboard)'
+2026-02-24 22:06:46.480 +05:30 [INF] Route matched with {action = "GetAll", controller = "Companies"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.CompaniesController (AdminDashboard).
+2026-02-24 22:06:46.497 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CompanyId], [c].[Address], [c].[CompanyName], [c].[ContactNumber], [c].[CreatedAt], [c].[Email], [c].[Status], [c].[UpdatedAt]
+FROM [Companies] AS [c]
+2026-02-24 22:06:46.501 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Company, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:06:46.504 +05:30 [INF] Executed action AdminDashboard.Controllers.CompaniesController.GetAll (AdminDashboard) in 20.9667ms
+2026-02-24 22:06:46.505 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.CompaniesController.GetAll (AdminDashboard)'
+2026-02-24 22:06:46.506 +05:30 [INF] HTTP GET /api/companies responded 200 in 29.7931 ms
+2026-02-24 22:06:46.508 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/companies - 200 null application/json; charset=utf-8 35.2518ms
+2026-02-24 22:06:49.506 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/vehicle - null null
+2026-02-24 22:06:49.514 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:06:49.522 +05:30 [INF] HTTP OPTIONS /api/vehicle responded 204 in 8.1899 ms
+2026-02-24 22:06:49.529 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/vehicle - 204 null null 22.7915ms
+2026-02-24 22:06:49.541 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/vehicle - null null
+2026-02-24 22:06:49.545 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:06:49.546 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard)'
+2026-02-24 22:06:49.555 +05:30 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.VehicleController (AdminDashboard).
+2026-02-24 22:06:49.585 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[VehicleId], [v].[CompanyId], [v].[CreatedAt], [v].[ImeiId], [v].[Model], [v].[RegistrationNumber], [v].[Remarks], [v].[Status], [v].[VehiclePhotoUrl]
+FROM [Vehicles] AS [v]
+WHERE [v].[CompanyId] = @__companyId_0
+2026-02-24 22:06:49.613 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Vehicle, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:06:49.620 +05:30 [INF] Executed action AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard) in 60.4902ms
+2026-02-24 22:06:49.622 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard)'
+2026-02-24 22:06:49.623 +05:30 [INF] HTTP GET /api/vehicle responded 200 in 78.6588 ms
+2026-02-24 22:06:49.625 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/vehicle - 200 null application/json; charset=utf-8 83.9642ms
+2026-02-24 22:18:41.474 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-24 22:18:41.481 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:18:41.482 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 1.4808 ms
+2026-02-24 22:18:41.487 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 12.9759ms
+2026-02-24 22:18:41.491 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-24 22:18:41.493 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:18:41.495 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 22:18:41.496 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-24 22:18:41.544 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], CASE
+    WHEN [v].[VehicleId] IS NOT NULL THEN [v].[RegistrationNumber]
+    ELSE N'Not Assigned'
+END AS [Vehicle], CASE
+    WHEN [u].[UserId] IS NOT NULL THEN [u].[FullName]
+    ELSE N'Not Assigned'
+END AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+LEFT JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+LEFT JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+ORDER BY [t].[TripDate] DESC, [t].[TripId] DESC
+2026-02-24 22:18:41.557 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType31`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:18:41.560 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 60.7571ms
+2026-02-24 22:18:41.562 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 22:18:41.563 +05:30 [INF] HTTP GET /api/trips responded 200 in 70.0019 ms
+2026-02-24 22:18:41.566 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 74.5582ms
+2026-02-24 22:19:27.250 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/trips - null null
+2026-02-24 22:19:27.270 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:19:27.271 +05:30 [INF] HTTP OPTIONS /api/trips responded 204 in 1.5985 ms
+2026-02-24 22:19:27.276 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/trips - 204 null null 26.4114ms
+2026-02-24 22:19:27.282 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/trips - null null
+2026-02-24 22:19:27.285 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:19:27.287 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 22:19:27.289 +05:30 [INF] Route matched with {action = "GetAll", controller = "Trip"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.TripController (AdminDashboard).
+2026-02-24 22:19:27.309 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[TripId], [t].[TripDate], [t].[SessionName], [t].[Status], [r].[RouteName] AS [Route], CASE
+    WHEN [v].[VehicleId] IS NOT NULL THEN [v].[RegistrationNumber]
+    ELSE N'Not Assigned'
+END AS [Vehicle], CASE
+    WHEN [u].[UserId] IS NOT NULL THEN [u].[FullName]
+    ELSE N'Not Assigned'
+END AS [Driver]
+FROM [Trip] AS [t]
+INNER JOIN [Routes] AS [r] ON [t].[RouteId] = [r].[RouteId]
+LEFT JOIN [Vehicles] AS [v] ON [t].[VehicleId] = [v].[VehicleId]
+LEFT JOIN [Users] AS [u] ON [t].[DriverId] = [u].[UserId]
+WHERE [t].[CompanyId] = @__companyId_0
+ORDER BY [t].[TripDate] DESC, [t].[TripId] DESC
+2026-02-24 22:19:27.315 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType31`7[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Char, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:19:27.318 +05:30 [INF] Executed action AdminDashboard.Controllers.TripController.GetAll (AdminDashboard) in 21.9651ms
+2026-02-24 22:19:27.320 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.TripController.GetAll (AdminDashboard)'
+2026-02-24 22:19:27.323 +05:30 [INF] HTTP GET /api/trips responded 200 in 38.0129 ms
+2026-02-24 22:19:27.328 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/trips - 200 null application/json; charset=utf-8 45.7811ms
+2026-02-24 22:33:20.722 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/vehicle - null null
+2026-02-24 22:33:20.732 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:33:20.734 +05:30 [INF] HTTP OPTIONS /api/vehicle responded 204 in 1.4324 ms
+2026-02-24 22:33:20.737 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/vehicle - 204 null null 17.9338ms
+2026-02-24 22:33:20.745 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/vehicle - null null
+2026-02-24 22:33:20.749 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:33:20.751 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard)'
+2026-02-24 22:33:20.752 +05:30 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.VehicleController (AdminDashboard).
+2026-02-24 22:33:20.781 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[VehicleId], [v].[CompanyId], [v].[CreatedAt], [v].[ImeiId], [v].[Model], [v].[RegistrationNumber], [v].[Remarks], [v].[Status], [v].[VehiclePhotoUrl]
+FROM [Vehicles] AS [v]
+WHERE [v].[CompanyId] = @__companyId_0
+2026-02-24 22:33:20.786 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Vehicle, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:33:20.788 +05:30 [INF] Executed action AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard) in 27.9657ms
+2026-02-24 22:33:20.791 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard)'
+2026-02-24 22:33:20.793 +05:30 [INF] HTTP GET /api/vehicle responded 200 in 44.7965 ms
+2026-02-24 22:33:20.795 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/vehicle - 200 null application/json; charset=utf-8 50.3959ms
+2026-02-24 22:34:09.707 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5046/api/vehicle - null null
+2026-02-24 22:34:09.718 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:34:09.719 +05:30 [INF] HTTP OPTIONS /api/vehicle responded 204 in 0.9203 ms
+2026-02-24 22:34:09.721 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5046/api/vehicle - 204 null null 14.0215ms
+2026-02-24 22:34:09.724 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5046/api/vehicle - null null
+2026-02-24 22:34:09.728 +05:30 [INF] CORS policy execution successful.
+2026-02-24 22:34:09.730 +05:30 [INF] Executing endpoint 'AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard)'
+2026-02-24 22:34:09.731 +05:30 [INF] Route matched with {action = "GetAll", controller = "Vehicle"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller AdminDashboard.Controllers.VehicleController (AdminDashboard).
+2026-02-24 22:34:09.739 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__companyId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [v].[VehicleId], [v].[CompanyId], [v].[CreatedAt], [v].[ImeiId], [v].[Model], [v].[RegistrationNumber], [v].[Remarks], [v].[Status], [v].[VehiclePhotoUrl]
+FROM [Vehicles] AS [v]
+WHERE [v].[CompanyId] = @__companyId_0
+2026-02-24 22:34:09.744 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[AdminDashboard.Models.Vehicle, AdminDashboard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-02-24 22:34:09.747 +05:30 [INF] Executed action AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard) in 13.2609ms
+2026-02-24 22:34:09.749 +05:30 [INF] Executed endpoint 'AdminDashboard.Controllers.VehicleController.GetAll (AdminDashboard)'
+2026-02-24 22:34:09.750 +05:30 [INF] HTTP GET /api/vehicle responded 200 in 21.6226 ms
+2026-02-24 22:34:09.753 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5046/api/vehicle - 200 null application/json; charset=utf-8 28.5171ms

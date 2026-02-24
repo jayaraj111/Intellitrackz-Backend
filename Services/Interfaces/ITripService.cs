@@ -13,5 +13,6 @@ public interface ITripService
     Task<Trip?> UpdateAsync(int id, TripDto dto, int companyId);
     Task<bool> DeleteAsync(int id, int companyId);
     Task<int> GenerateFromScheduleAsync(int scheduleId,DateTime startDate,DateTime endDate,int companyId);
+    Task<List<TripPathPointDto>> GetTripPathAsync(int tripId, int companyId);
 }
 

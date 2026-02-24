@@ -83,5 +83,13 @@ public class TripController : ControllerBase
         });
     }
 
+    [HttpGet("{tripId}/route-path")]
+    public async Task<IActionResult> GetTripPath(int tripId)
+    {
+        int companyId = int.Parse(User.FindFirst("companyId")!.Value);
+        var data = await _service.GetTripPathAsync(tripId, companyId);
+        return Ok(data);
+    }
+
 
 }
