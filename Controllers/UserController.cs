@@ -148,7 +148,10 @@ public class UserController : ControllerBase
             FullName = user.FullName,
             UserType = user.UserType,
             CompanyId = user.CompanyId,
-            IsFirstLogin = user.IsFirstLogin
+            IsFirstLogin = user.IsFirstLogin,
+            Email = user.Email,
+            PhoneNumber = user.PhoneNumber,
+            CompanyName = user.Company?.CompanyName
         };
 
         var data = new LoginData

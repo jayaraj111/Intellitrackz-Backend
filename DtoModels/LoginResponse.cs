@@ -9,4 +9,7 @@ public class LoginResponse
     public string? UserType { get; set; }
     public int CompanyId { get; set; }
     public char IsFirstLogin { get; set; }
+    public string Email { get; set; } = null!;
+    public string? PhoneNumber { get; set; }
+    public string? CompanyName { get; set; }
 }

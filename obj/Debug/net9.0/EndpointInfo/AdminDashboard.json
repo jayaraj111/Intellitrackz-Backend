@@ -610,6 +610,27 @@
         }
       }
     },
+    "/api/RouteStop/exists": {
+      "get": {
+        "tags": [
+          "RouteStop"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/RouteStopMapping": {
       "get": {
         "tags": [

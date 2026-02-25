@@ -2,6 +2,7 @@
 using AdminDashboard.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.Design;
 
 namespace AdminDashboard.Controllers;
@@ -77,4 +78,18 @@ public class RouteStopController : ControllerBase
 
         return Ok(new { message = "Stop deleted successfully" });
     }
+
+    [HttpGet("exists")]
+    public async Task<IActionResult> StopExists(string name)
+    {
+        int companyId = GetCompanyId();
+
+        bool exists =
+            await _routeStopService.StopExistsAsync(name, companyId);
+
+        return Ok(new { exists });
+    }
+
+
+
 }

@@ -370,6 +370,22 @@
   },
   {
     "ContainingType": "AdminDashboard.Controllers.RouteStopController",
+    "Method": "StopExists",
+    "RelativePath": "api/RouteStop/exists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminDashboard.Controllers.RouteStopController",
     "Method": "Search",
     "RelativePath": "api/RouteStop/search",
     "HttpMethod": "GET",
