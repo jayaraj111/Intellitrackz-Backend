@@ -12,4 +12,6 @@ public class LoginResponse
     public string Email { get; set; } = null!;
     public string? PhoneNumber { get; set; }
     public string? CompanyName { get; set; }
+    public DateTime? DateOfBirth { get; set; }
+    public string? PhotoUrl { get; set; }
 }

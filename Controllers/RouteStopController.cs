@@ -79,17 +79,24 @@ public class RouteStopController : ControllerBase
         return Ok(new { message = "Stop deleted successfully" });
     }
 
+    //[HttpGet("exists")]
+    //public async Task<IActionResult> StopExists(string name)
+    //{
+    //    int companyId = GetCompanyId();
+
+    //    bool exists =
+    //        await _routeStopService.StopExistsAsync(name, companyId);
+
+    //    return Ok(new { exists });
+    //}
     [HttpGet("exists")]
-    public async Task<IActionResult> StopExists(string name)
+    public async Task<IActionResult> CheckExists([FromQuery] string name, [FromQuery] int? excludeId)
     {
         int companyId = GetCompanyId();
-
-        bool exists =
-            await _routeStopService.StopExistsAsync(name, companyId);
+        bool exists = await _routeStopService.StopExistsAsync(name, companyId, excludeId);
 
         return Ok(new { exists });
     }
-
 
 
 }

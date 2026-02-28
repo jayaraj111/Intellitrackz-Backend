@@ -366,7 +366,6 @@ D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\A
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\AdminDashboard.pdb
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\AdminDashboard.genruntimeconfig.cache
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\ref\AdminDashboard.dll
-D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\AdminDashboard.sourcelink.json
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\compressed\pqxvzxsn0c-{0}-r66rdfs22k-r66rdfs22k.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\compressed\j51ywzdl77-{0}-ocu0io0eih-ocu0io0eih.gz
@@ -374,3 +373,4 @@ D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\A
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\compressed\h44qbhfe91-{0}-e1i4mu0yhs-e1i4mu0yhs.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\compressed\kfprx2js1u-{0}-coynef5st7-coynef5st7.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\compressed\rrrxnngv5h-{0}-ck3x5ahlqn-ck3x5ahlqn.gz
+D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

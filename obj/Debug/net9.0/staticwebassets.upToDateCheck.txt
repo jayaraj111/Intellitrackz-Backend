@@ -115,6 +115,8 @@ wwwroot\marker-icon.d577052aa271e13f.png
 wwwroot\polyfills.6ec943b2ef42929d.js
 wwwroot\runtime.8424d6dfa4184b3d.js
 wwwroot\styles.c14e10268374371b.css
+wwwroot\uploads\profiles\profile_2_639078986601069992.jpg
+wwwroot\uploads\profiles\profile_2_639079022945302358.jpg
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\342.013a6f63b107241e.js
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\194.37a560818bbb4988.js
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\wwwroot\3rdpartylicenses.txt

@@ -67,6 +67,27 @@ public class UserController : ControllerBase
         return Ok(user);
     }
 
+    [HttpGet("user-details/{id:int}")]
+    [Authorize]
+    public async Task<IActionResult> GetUserDetailsById(int id)
+    {
+        var user = await _userService.GetUserDetailsByIdAsync(id);
+        if (user == null) return NotFound();
+
+        return Ok(new
+        {
+            userId = user.UserId,
+            username = user.Username,
+            fullName = user.FullName,
+            email = user.Email,
+            phoneNumber = user.PhoneNumber,
+            userType = user.UserType,
+            photoUrl = !string.IsNullOrEmpty(user.PhotoUrl)? $"{Request.Scheme}://{Request.Host}{user.PhotoUrl}" : null,
+            dateOfBirth = user.DateOfBirth,
+            companyName = user.Company?.CompanyName 
+        });
+    }
+
     [HttpGet("search")]
     [Authorize]
     public async Task<IActionResult> Search([FromQuery] string? q)
@@ -151,7 +172,9 @@ public class UserController : ControllerBase
             IsFirstLogin = user.IsFirstLogin,
             Email = user.Email,
             PhoneNumber = user.PhoneNumber,
-            CompanyName = user.Company?.CompanyName
+            CompanyName = user.Company?.CompanyName,
+            PhotoUrl = !string.IsNullOrEmpty(user.PhotoUrl) ? $"{Request.Scheme}://{Request.Host}{user.PhotoUrl}" : null,
+            DateOfBirth = user.DateOfBirth
         };
 
         var data = new LoginData
@@ -178,6 +201,50 @@ public class UserController : ControllerBase
         await _userService.UpdateAsync(user.UserId, user);
 
         return Ok(new { message = "Password changed successfully" });
+    }
+
+    [HttpPut("update-profile/{id}")]
+    public async Task<IActionResult> UpdateProfile(int id, [FromForm] ProfileUpdateDto model)
+    {
+        var user = await _userService.GetByIdAsync(id);
+        if (user == null) return NotFound();
+
+        user.FullName = model.FullName;
+        user.Email = model.Email;
+        user.PhoneNumber = model.PhoneNumber;
+        user.DateOfBirth = model.DateOfBirth;
+
+        if (model.Photo != null && model.Photo.Length > 0)
+        {
+            if (!string.IsNullOrEmpty(user.PhotoUrl))
+            {
+                var oldPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", user.PhotoUrl.TrimStart('/'));
+                if (System.IO.File.Exists(oldPath)) System.IO.File.Delete(oldPath);
+            }
+
+            var fileName = $"profile_{id}_{DateTime.UtcNow.Ticks}{Path.GetExtension(model.Photo.FileName)}";
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/profiles", fileName);
+
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+
+           
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await model.Photo.CopyToAsync(stream);
+            }
+
+            user.PhotoUrl = $"/uploads/profiles/{fileName}";
+        }
+
+        try
+        {
+            await _userService.UpdateAsync(id, user);
+            return Ok(new { message = "Profile updated successfully", photoUrl = user.PhotoUrl });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { message = ex.Message });
+        }
     }
 
     private string GenerateJwtToken(User user)

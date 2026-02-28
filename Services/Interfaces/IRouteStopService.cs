@@ -11,5 +11,5 @@ public interface IRouteStopService
     Task<Stop> CreateAsync(Stop stop);
     Task<Stop?> UpdateAsync(int id, Stop stop, int companyId);
     Task<bool> DeleteAsync(int id, int companyId);
-    Task<bool> StopExistsAsync(string stopName, int companyId);
+    Task<bool> StopExistsAsync(string stopName, int companyId, int? excludeId = null);
 }

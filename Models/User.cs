@@ -14,6 +14,7 @@ public class User
     public char IsFirstLogin { get; set; } = 'Y';
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? UpdatedAt { get; set; }
-
+    public DateTime? DateOfBirth { get; set; } 
+    public string? PhotoUrl { get; set; }
     public Company? Company { get; set; }
 }

@@ -74,14 +74,15 @@ public class RouteStopService : IRouteStopService
         await _context.SaveChangesAsync();
         return true;
     }
-    public async Task<bool> StopExistsAsync(string stopName,int companyId)
+    public async Task<bool> StopExistsAsync(string stopName, int companyId, int? excludeId = null)
     {
         var normalized = stopName.Trim().ToLower();
 
         return await _context.Stops
             .AnyAsync(s =>
                 s.CompanyId == companyId &&
-                s.StopName.ToLower().Trim() == normalized);
+                s.StopName.ToLower().Trim() == normalized &&
+                (!excludeId.HasValue || s.StopId != excludeId.Value)); 
     }
-   
+
 }

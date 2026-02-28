@@ -47,6 +47,13 @@ public class UserService : IUserService
         return await _context.Users.FindAsync(id);
     }
 
+    public async Task<User?> GetUserDetailsByIdAsync(int id)
+    {
+        return await _context.Users
+            .Include(u => u.Company)
+            .FirstOrDefaultAsync(u => u.UserId == id);
+    }
+
     public async Task<User?> GetByUsernameAsync(string username)
     {
         return await _context.Users
@@ -109,8 +116,10 @@ public class UserService : IUserService
         existing.CompanyId = user.CompanyId;
         existing.Remarks = user.Remarks;
         existing.UpdatedAt = DateTime.UtcNow;
+        existing.DateOfBirth = user.DateOfBirth;
+        existing.PhotoUrl = user.PhotoUrl;
 
-        if (!string.IsNullOrWhiteSpace(user.PasswordHash))
+        if (!string.IsNullOrWhiteSpace(user.PasswordHash) && existing.PasswordHash != user.PasswordHash )
         {
             existing.PasswordHash = PasswordHasher.Hash(user.PasswordHash);
             existing.IsFirstLogin = 'N';
