@@ -202,7 +202,6 @@ D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\A
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\vidce2lg8a-{0}-0edwmptisn-0edwmptisn.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\yizjz2gumv-{0}-4l121358ob-4l121358ob.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\z8g3jn9o3h-{0}-nf69tc4d23-nf69tc4d23.gz
-D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\pqxvzxsn0c-{0}-hd6mamr3lr-hd6mamr3lr.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\t0084if8rd-{0}-rajaqzv86h-rajaqzv86h.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\umv4vxecos-{0}-7ljlpajqfi-7ljlpajqfi.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\4m0j0pzfxy-{0}-nxnfsfca0s-nxnfsfca0s.gz
@@ -211,3 +210,9 @@ D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\A
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\9ekotywivr-{0}-bgpmq0yr2a-bgpmq0yr2a.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\5xqlbn9bua-{0}-45nhflenif-45nhflenif.gz
 D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\swae.build.ex.cache
+D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\h44qbhfe91-{0}-e1i4mu0yhs-e1i4mu0yhs.gz
+D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\ul2ivaq8re-{0}-ooswfdvzun-ooswfdvzun.gz
+D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\j51ywzdl77-{0}-ocu0io0eih-ocu0io0eih.gz
+D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\pqxvzxsn0c-{0}-r66rdfs22k-r66rdfs22k.gz
+D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\kfprx2js1u-{0}-coynef5st7-coynef5st7.gz
+D:\IntelliTrackzzzzzzzzzzzzzzzzzzzzzzz\TecIntellitracks\BackEnd\AdminDashboard\AdminDashboard\obj\Release\net9.0\compressed\rrrxnngv5h-{0}-ck3x5ahlqn-ck3x5ahlqn.gz
