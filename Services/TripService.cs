@@ -138,12 +138,41 @@ public class TripService : ITripService
         return true;
     }
 
-    public async Task<int> GenerateFromScheduleAsync(int scheduleId,DateTime startDate,DateTime endDate,int companyId)
+    public async Task<int> GenerateFromScheduleAsync(
+     int scheduleId,
+     DateTime startDate,
+     DateTime endDate,
+     int companyId)
     {
-        var schedule = await _context.TripSchedules.FirstOrDefaultAsync(x => x.TripScheduleId == scheduleId);
+        var schedule = await _context.TripSchedules
+            .FirstOrDefaultAsync(x => x.TripScheduleId == scheduleId);
 
         if (schedule == null)
-            return 0;
+            throw new Exception("Trip schedule not found");
+
+        // 🚫 BLOCK if any trip already started or completed
+        bool startedTrips = await _context.Trips
+            .AnyAsync(t =>
+                t.CompanyId == companyId &&
+                t.RouteId == schedule.RouteId &&
+                t.SessionName.StartsWith(schedule.TripName) &&
+                (t.Status == 'S' || t.Status == 'C'));
+
+        if (startedTrips)
+            throw new Exception(
+                "Trips already started or completed. Regeneration not allowed.");
+
+        // 🧹 REMOVE old planned trips (safe regeneration)
+        var oldTrips = await _context.Trips
+            .Where(t =>
+                t.CompanyId == companyId &&
+                t.RouteId == schedule.RouteId &&
+                t.SessionName.StartsWith(schedule.TripName) &&
+                t.Status == 'P')
+            .ToListAsync();
+
+        if (oldTrips.Any())
+            _context.Trips.RemoveRange(oldTrips);
 
         int createdCount = 0;
 
@@ -163,20 +192,12 @@ public class TripService : ITripService
             if (!shouldRun)
                 continue;
 
-            bool exists = await _context.Trips.AnyAsync(t =>
-                t.CompanyId == companyId &&
-                t.RouteId == schedule.RouteId &&
-                t.TripDate.Date == date.Date &&
-                t.SessionName.StartsWith(schedule.TripName));
-
-            if (exists)
-                continue;
-
             _context.Trips.Add(new Trip
             {
                 CompanyId = companyId,
                 RouteId = schedule.RouteId,
                 TripDate = date,
+
                 SessionName =
                     $"{schedule.TripName}_{date:ddMMMyy}",
 
@@ -191,6 +212,8 @@ public class TripService : ITripService
 
             createdCount++;
         }
+
+        schedule.TripsGenerated = true;
 
         await _context.SaveChangesAsync();
 

@@ -18,4 +18,5 @@ public class TripSchedule
     public bool Sat { get; set; }
     public bool Sun { get; set; }
     public char Status { get; set; } = 'Y';
+    public bool TripsGenerated { get; set; } = false;
 }

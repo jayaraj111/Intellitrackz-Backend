@@ -81,7 +81,7 @@ public class UserService : IUserService
         if (await _context.Users.AnyAsync(u => u.Username == user.Username))
             throw new Exception("Username already exists.");
 
-        if (await _context.Users.AnyAsync(u => u.Email == user.Email))
+        if (await _context.Users.AnyAsync(u => u.Email == user.Email && !string.IsNullOrWhiteSpace(user.Email)))
             throw new Exception("Email already exists.");
 
         user.PasswordHash = PasswordHasher.Hash(user.PasswordHash);
